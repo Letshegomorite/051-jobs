@@ -1,20 +1,21 @@
+
+<!-- FILE: index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SA Jobs Hub</title>
+  <title>051 Jobs</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header class="header">
-  <h1>SA Jobs Hub</h1>
+  <h1>051 Jobs</h1>
 </header>
 
 <section class="hero">
-  <h2>Find Jobs in South Africa</h2>
+  <h2>Find Jobs, Learnerships & Bursaries</h2>
   <input type="text" id="searchInput" placeholder="Search jobs...">
 </section>
 
@@ -22,11 +23,18 @@
   <select id="locationFilter">
     <option value="">All Locations</option>
     <option value="Gauteng">Gauteng</option>
+    <option value="Free State">Free State</option>
     <option value="Johannesburg">Johannesburg</option>
   </select>
 </section>
 
 <section id="jobs-container" class="jobs-grid"></section>
+
+<div class="pagination">
+  <button onclick="prevPage()">Previous</button>
+  <span id="page-info"></span>
+  <button onclick="nextPage()">Next</button>
+</div>
 
 <script src="script.js"></script>
 </body>
