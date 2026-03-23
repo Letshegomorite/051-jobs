@@ -1,14 +1,97 @@
-[
-  {
-    "title": "Admin Clerk",
-    "company": "Department of Labour",
-    "location": "Gauteng",
-    "link": "https://example.com"
-  },
-  {
-    "title": "IT Intern",
-    "company": "MTN",
-    "location": "Johannesburg",
-    "link": "https://example.com"
-  }
-]
+{
+  "source": "indeed",
+  "location": "Gauteng, South Africa",
+  "date_fetched": "2026-03-23",
+  "jobs": [
+    {
+      "title": "General Assistant",
+      "company": "Cashbuild Limited",
+      "location": "Alberton, Gauteng",
+      "type": "Full-time",
+      "description": "Customer service, merchandising, shelf labeling, housekeeping.",
+      "requirements": ["Customer service skills", "Safety compliance awareness"],
+      "source_url": "https://za.indeed.com"
+    },
+    {
+      "title": "Admin Assistant (Depot Admin & Support)",
+      "company": "City of Ekurhuleni",
+      "location": "Ekurhuleni, Gauteng",
+      "type": "Full-time",
+      "description": "Administrative duties, job scheduling, business process systems.",
+      "requirements": ["Admin experience", "Computer literacy"],
+      "source_url": "https://za.indeed.com"
+    },
+    {
+      "title": "Front Office Receptionist",
+      "company": "Radisson Hotel Group",
+      "location": "Kempton Park, Gauteng",
+      "type": "Full-time",
+      "description": "Front desk operations, guest satisfaction.",
+      "requirements": ["Communication skills", "Hospitality experience"],
+      "source_url": "https://za.indeed.com"
+    },
+    {
+      "title": "Retail Sales Assistant",
+      "company": "Sky Achievers Direct Marketing",
+      "location": "Johannesburg, Gauteng",
+      "type": "Entry-level",
+      "description": "Customer service, product sales, promotions.",
+      "requirements": ["Matric", "Sales skills"],
+      "source_url": "https://za.indeed.com"
+    },
+    {
+      "title": "Receptionist",
+      "company": "GALXBOY",
+      "location": "Johannesburg, Gauteng",
+      "type": "Full-time",
+      "description": "Administrative tasks, filing, document handling.",
+      "requirements": ["Admin skills", "Communication"],
+      "source_url": "https://za.indeed.com"
+    },
+    {
+      "title": "Office Assistant",
+      "company": "Rand Water",
+      "location": "Glenvista, Gauteng",
+      "type": "Full-time",
+      "description": "Office admin, reconciliation, SAP usage.",
+      "requirements": ["SAP knowledge", "Computer literacy"],
+      "source_url": "https://za.indeed.com"
+    },
+    {
+      "title": "Entry Level Sales Representative",
+      "company": "Golden Point Marketing",
+      "location": "Johannesburg, Gauteng",
+      "type": "Entry-level",
+      "description": "Customer assistance, product knowledge, sales.",
+      "requirements": ["Matric", "Communication skills"],
+      "source_url": "https://za.indeed.com"
+    },
+    {
+      "title": "Warehouse Assistant",
+      "company": "Absolute Pets",
+      "location": "Kempton Park, Gauteng",
+      "type": "Full-time",
+      "description": "Stock handling, loading, receiving goods.",
+      "requirements": ["Physical fitness", "Attention to detail"],
+      "source_url": "https://za.indeed.com"
+    },
+    {
+      "title": "Call Center Agent (Inbound)",
+      "company": "WNS Global Services",
+      "location": "Centurion, Gauteng",
+      "type": "Full-time",
+      "description": "Customer support, inbound calls.",
+      "requirements": ["Customer service", "Communication"],
+      "source_url": "https://za.indeed.com"
+    },
+    {
+      "title": "Data Engineer (Kafka & Flink)",
+      "company": "PBT Group",
+      "location": "Johannesburg, Gauteng",
+      "type": "Full-time",
+      "description": "Build and optimize data pipelines.",
+      "requirements": ["Kafka", "Flink", "Data engineering"],
+      "source_url": "https://za.indeed.com"
+    }
+  ]
+}
