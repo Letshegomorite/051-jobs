@@ -1,30 +1,54 @@
-<!-- FILE: job.html -->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Job Details</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<!-- FILE: styles.css -->
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f5f7fb;
+}
 
-<div id="job-details"></div>
+.header {
+  background: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
 
-<script>
-fetch('jobs.json')
-  .then(res => res.json())
-  .then(data => {
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
-    const job = data[id];
+.hero {
+  text-align: center;
+  padding: 30px;
+  background: #2563eb;
+  color: white;
+}
 
-    document.getElementById('job-details').innerHTML = `
-      <h1>${job.title}</h1>
-      <p>${job.company}</p>
-      <p>${job.location}</p>
-      <a href="${job.link}" target="_blank">Apply Now</a>
-    `;
-  });
-</script>
+.hero input {
+  padding: 10px;
+  width: 60%;
+  border-radius: 5px;
+  border: none;
+}
 
-</body>
-</html>
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.job-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.details-btn {
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  background: #2563eb;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px;
+}
