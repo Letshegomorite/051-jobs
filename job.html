@@ -1,0 +1,30 @@
+<!-- FILE: job.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="job-details"></div>
+
+<script>
+fetch('jobs.json')
+  .then(res => res.json())
+  .then(data => {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const job = data[id];
+
+    document.getElementById('job-details').innerHTML = `
+      <h1>${job.title}</h1>
+      <p>${job.company}</p>
+      <p>${job.location}</p>
+      <a href="${job.link}" target="_blank">Apply Now</a>
+    `;
+  });
+</script>
+
+</body>
+</html>
