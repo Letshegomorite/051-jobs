@@ -1,17 +1,21 @@
-let jobs = [];
+<!-- FILE: script.js -->
 
 fetch('jobs.json')
   .then(res => res.json())
   .then(data => {
     jobs = data;
-    displayJobs(jobs);
+    displayJobs();
   });
 
-function displayJobs(data) {
+function displayJobs() {
   const container = document.getElementById('jobs-container');
   container.innerHTML = '';
 
-  data.forEach(job => {
+  const start = (currentPage - 1) * jobsPerPage;
+  const end = start + jobsPerPage;
+  const paginatedJobs = jobs.slice(start, end);
+
+  paginatedJobs.forEach((job, index) => {
     const div = document.createElement('div');
     div.classList.add('job-card');
 
@@ -19,16 +23,33 @@ function displayJobs(data) {
       <h3>${job.title}</h3>
       <p><strong>${job.company}</strong></p>
       <p>${job.location}</p>
-      <a href="${job.link}" target="_blank">Apply</a>
+      <a href="job.html?id=${start + index}" class="details-btn">View Details</a>
     `;
 
     container.appendChild(div);
   });
+
+  document.getElementById('page-info').innerText = `Page ${currentPage}`;
+}
+
+function nextPage() {
+  if (currentPage * jobsPerPage < jobs.length) {
+    currentPage++;
+    displayJobs();
+  }
+}
+
+function prevPage() {
+  if (currentPage > 1) {
+    currentPage--;
+    displayJobs();
+  }
 }
 
 // SEARCH
-document.getElementById('searchInput').addEventListener('keyup', (e) => {
-  const value = e.target.value.toLowerCase();
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('keyup', () => {
+  const value = searchInput.value.toLowerCase();
 
   const filtered = jobs.filter(job =>
     job.title.toLowerCase().includes(value) ||
@@ -36,15 +57,7 @@ document.getElementById('searchInput').addEventListener('keyup', (e) => {
     job.location.toLowerCase().includes(value)
   );
 
-  displayJobs(filtered);
-});
-
-// FILTER
-document.getElementById('locationFilter').addEventListener('change', (e) => {
-  const value = e.target.value;
-
-  if (!value) return displayJobs(jobs);
-
-  const filtered = jobs.filter(job => job.location === value);
-  displayJobs(filtered);
+  currentPage = 1;
+  jobs = filtered;
+  displayJobs();
 });
