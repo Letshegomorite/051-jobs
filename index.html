@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SA Jobs Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
+<body>
+
+<header class="header">
+  <h1>SA Jobs Hub</h1>
+</header>
+
+<section class="hero">
+  <h2>Find Jobs in South Africa</h2>
+  <input type="text" id="searchInput" placeholder="Search jobs...">
+</section>
+
+<section class="filters">
+  <select id="locationFilter">
+    <option value="">All Locations</option>
+    <option value="Gauteng">Gauteng</option>
+    <option value="Johannesburg">Johannesburg</option>
+  </select>
+</section>
+
+<section id="jobs-container" class="jobs-grid"></section>
+
+<script src="script.js"></script>
+</body>
+</html>
