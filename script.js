@@ -1,4 +1,4 @@
-/* 051 Jobs – Fixed & Improved Advanced Search */
+/* 051 Jobs – FINAL FIXED VERSION with better loading */
 
 let JOBS = [], BURSARIES = [], COURSES = [];
 
@@ -10,23 +10,27 @@ function debounce(func, delay = 300) {
     };
 }
 
-// Load data with retry for GitHub Pages
-async function loadData() {
-    try {
-        const [j, b, c] = await Promise.all([
-            fetch('jobs.json').then(r => r.json()),
-            fetch('bursaries.json').then(r => r.json()),
-            fetch('courses.json').then(r => r.json())
-        ]);
-        JOBS = j;
-        BURSARIES = b;
-        COURSES = c;
-        console.log(`✅ Loaded ${JOBS.length} jobs, ${BURSARIES.length} bursaries, ${COURSES.length} courses`);
-        return true;
-    } catch (e) {
-        console.error("Failed to load JSON files:", e);
-        return false;
+// Load JSON files with retry
+async function loadData(retries = 3) {
+    for (let i = 0; i < retries; i++) {
+        try {
+            const [j, b, c] = await Promise.all([
+                fetch('jobs.json').then(r => { if (!r.ok) throw new Error('jobs.json not found'); return r.json(); }),
+                fetch('bursaries.json').then(r => { if (!r.ok) throw new Error('bursaries.json not found'); return r.json(); }),
+                fetch('courses.json').then(r => { if (!r.ok) throw new Error('courses.json not found'); return r.json(); })
+            ]);
+            JOBS = j;
+            BURSARIES = b;
+            COURSES = c;
+            console.log(`✅ Successfully loaded: ${JOBS.length} jobs, ${BURSARIES.length} bursaries, ${COURSES.length} courses`);
+            return true;
+        } catch (e) {
+            console.warn(`Attempt ${i+1} failed:`, e.message);
+            await new Promise(resolve => setTimeout(resolve, 500)); // wait 0.5s before retry
+        }
     }
+    console.error("❌ Failed to load JSON files after retries. Make sure jobs.json, bursaries.json and courses.json are in the root folder.");
+    return false;
 }
 
 function createCard(item, type) {
@@ -87,17 +91,14 @@ const debouncedJobSearch = debounce(() => { jobFilters.page = 1; filterAndRender
 
 function filterAndRenderJobs() {
     const searchTerm = (document.getElementById('jobsSearchInput')?.value || '').toLowerCase().trim();
-
     let filtered = JOBS.filter(job => {
         const matchesSearch = !searchTerm || 
             job.title.toLowerCase().includes(searchTerm) ||
             (job.company && job.company.toLowerCase().includes(searchTerm)) ||
             job.description.toLowerCase().includes(searchTerm);
-
         const matchesType = jobFilters.types.length === 0 || jobFilters.types.includes(job.type);
         const matchesLocation = jobFilters.locations.length === 0 || 
             jobFilters.locations.some(loc => job.location.toLowerCase().includes(loc.toLowerCase()));
-
         return matchesSearch && matchesType && matchesLocation;
     });
 
@@ -124,7 +125,7 @@ function clearJobFilters() {
     filterAndRenderJobs();
 }
 
-// ====================== BURSARIES ======================
+// ====================== BURSARIES & COURSES (same pattern) ======================
 let bursaryFilters = { search: '', levels: [], page: 1 };
 const BURSARIES_PER_PAGE = 9;
 
@@ -179,7 +180,7 @@ function clearBursaryFilters() {
     filterAndRenderBursaries();
 }
 
-// ====================== COURSES ======================
+// COURSES (identical pattern)
 let courseFilters = { search: '', modes: [], page: 1 };
 const COURSES_PER_PAGE = 9;
 
@@ -255,11 +256,8 @@ async function renderFeatured() {
 }
 
 async function start() {
-    const loaded = await loadData();
-    if (!loaded) {
-        console.error("Could not load JSON files. Check that jobs.json, bursaries.json and courses.json are in the same folder.");
-        return;
-    }
+    const success = await loadData();
+    if (!success) return;
 
     if (document.getElementById('featuredJobs')) renderFeatured();
 
