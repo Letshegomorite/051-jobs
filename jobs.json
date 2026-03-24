@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Senior Software Engineer",
+    "company": "Vanguard Tech",
+    "location": "Johannesburg, Gauteng",
+    "type": "Full-time",
+    "salary": "R55,000 – R75,000",
+    "description": "Vanguard Tech is looking for a Senior Software Engineer to build scalable web apps used by millions across Africa.",
+    "requirements": ["5+ years full-stack","React / Next.js expert","TypeScript","AWS experience"],
+    "link": "https://vanguardtech.co.za/careers"
+  },
+  {
+    "id": 2,
+    "title": "Digital Marketing Specialist",
+    "company": "BrandBoost Agency",
+    "location": "Cape Town, Western Cape",
+    "type": "Full-time",
+    "salary": "R32,000 – R48,000",
+    "description": "Lead SEO, Google Ads and social campaigns for premium clients.",
+    "requirements": ["3+ years digital marketing","Google Ads & Meta","Analytics skills"],
+    "link": "https://brandboost.co.za/apply"
+  },
+  {
+    "id": 3,
+    "title": "Financial Analyst",
+    "company": "FinSecure Solutions",
+    "location": "Pretoria, Gauteng",
+    "type": "Full-time",
+    "salary": "R42,000 – R58,000",
+    "description": "Analyse financials, build models and support executive decisions.",
+    "requirements": ["3+ years finance","Advanced Excel","Power BI"],
+    "link": "https://finsecure.co.za/vacancies"
+  },
+  {
+    "id": 4,
+    "title": "UX/UI Designer",
+    "company": "CreativLabs",
+    "location": "Durban, KwaZulu-Natal",
+    "type": "Contract",
+    "salary": "R38,000",
+    "description": "6-month contract designing mobile and web interfaces in Figma.",
+    "requirements": ["3+ years UX/UI","Figma mastery","Portfolio required"],
+    "link": "https://creativlabs.co.za/careers"
+  },
+  {
+    "id": 5,
+    "title": "Customer Success Executive",
+    "company": "TeleLink SA",
+    "location": "Bloemfontein, Free State",
+    "type": "Full-time",
+    "salary": "R28,000 – R36,000",
+    "description": "Onboard clients and ensure they get maximum value from our telecom solutions.",
+    "requirements": ["2+ years success","CRM experience"],
+    "link": "https://telelink.co.za/jobs"
+  },
+  {
+    "id": 6,
+    "title": "Data Scientist",
+    "company": "AI Innovate",
+    "location": "Remote",
+    "type": "Full-time",
+    "salary": "R65,000 – R90,000",
+    "description": "Build ML models that power banking and retail AI products.",
+    "requirements": ["4+ years data science","Python & TensorFlow"],
+    "link": "https://aiinnovate.co.za/careers"
+  },
+  {
+    "id": 7,
+    "title": "Enterprise Sales Manager",
+    "company": "RetailGiant",
+    "location": "Johannesburg, Gauteng",
+    "type": "Full-time",
+    "salary": "R50,000 + commission",
+    "description": "Hunt new enterprise clients and close multi-million rand deals.",
+    "requirements": ["5+ years enterprise sales","Salesforce"],
+    "link": "https://retailgiant.co.za/apply"
+  },
+  {
+    "id": 8,
+    "title": "HR Business Partner",
+    "company": "PeopleFirst Group",
+    "location": "Cape Town, Western Cape",
+    "type": "Full-time",
+    "salary": "R45,000 – R60,000",
+    "description": "Strategic HR role supporting business leaders.",
+    "requirements": ["5+ years HRBP","Labour law knowledge"],
+    "link": "https://peoplefirst.co.za/vacancies"
+  },
+  {
+    "id": 9,
+    "title": "Junior Content Creator",
+    "company": "MediaWave",
+    "location": "Johannesburg, Gauteng",
+    "type": "Internship",
+    "salary": "R8,000 stipend",
+    "description": "Create short-form video content for TikTok and Instagram.",
+    "requirements": ["Portfolio of social content","CapCut skills"],
+    "link": "https://mediawave.co.za/internships"
+  },
+  {
+    "id": 10,
+    "title": "IT Support Technician",
+    "company": "NetGuard Systems",
+    "location": "Durban, KwaZulu-Natal",
+    "type": "Full-time",
+    "salary": "R22,000 – R30,000",
+    "description": "First-line technical support for 150+ staff members.",
+    "requirements": ["2+ years IT support","CompTIA A+"],
+    "link": "https://netguard.co.za/careers"
+  }
+]

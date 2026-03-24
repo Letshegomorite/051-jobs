@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "NSFAS Bursary 2026",
+    "provider": "NSFAS",
+    "amount": "Full tuition + R1,800 allowance",
+    "deadline": "31 March 2026",
+    "level": "Undergraduate",
+    "description": "National Student Financial Aid Scheme for South African citizens studying at public universities and TVET colleges.",
+    "requirements": ["South African citizen","Household income below R350,000","Accepted at public institution"],
+    "link": "https://www.nsfas.org.za"
+  },
+  {
+    "id": 2,
+    "title": "Funza Lushaka Bursary",
+    "provider": "Department of Basic Education",
+    "amount": "Full tuition + stipend",
+    "deadline": "15 February 2026",
+    "level": "Undergraduate",
+    "description": "Bursary for students who want to become teachers in priority subject areas.",
+    "requirements": ["Commitment to teach in SA public schools","Good academic record"],
+    "link": "https://www.funzalushaka.gov.za"
+  },
+  {
+    "id": 3,
+    "title": "Anglo American Bursary Programme",
+    "provider": "Anglo American",
+    "amount": "R120,000 per year",
+    "deadline": "30 April 2026",
+    "level": "Undergraduate",
+    "description": "Engineering, mining, geology and finance bursaries.",
+    "requirements": ["Matric with 70%+ average","Engineering or Commerce degree"],
+    "link": "https://www.angloamerican.com/careers/bursaries"
+  },
+  {
+    "id": 4,
+    "title": "Standard Bank Bursary",
+    "provider": "Standard Bank",
+    "amount": "Full tuition + laptop",
+    "deadline": "28 February 2026",
+    "level": "Undergraduate",
+    "description": "For students studying Finance, Economics, Accounting and IT.",
+    "requirements": ["Financial need","Academic excellence"],
+    "link": "https://www.standardbank.co.za/bursaries"
+  },
+  {
+    "id": 5,
+    "title": "MasterCard Foundation Scholars",
+    "provider": "MasterCard Foundation",
+    "amount": "Full scholarship",
+    "deadline": "15 March 2026",
+    "level": "Undergraduate",
+    "description": "Full scholarships at selected SA universities for young leaders.",
+    "requirements": ["Leadership potential","Financial need"],
+    "link": "https://www.mastercardfdn.org"
+  },
+  {
+    "id": 6,
+    "title": "SASOL Bursary",
+    "provider": "SASOL",
+    "amount": "R150,000 per year",
+    "deadline": "31 March 2026",
+    "level": "Undergraduate",
+    "description": "Engineering and Science bursaries.",
+    "requirements": ["STEM subjects","Matric 75%+"],
+    "link": "https://www.sasol.com/careers/bursaries"
+  },
+  {
+    "id": 7,
+    "title": "Old Mutual Bursary",
+    "provider": "Old Mutual",
+    "amount": "Full tuition",
+    "deadline": "20 February 2026",
+    "level": "Undergraduate",
+    "description": "Actuarial, Accounting and Finance bursaries.",
+    "requirements": ["Mathematics 80%","Financial need"],
+    "link": "https://www.oldmutual.co.za/bursaries"
+  },
+  {
+    "id": 8,
+    "title": "TVET College Bursary",
+    "provider": "DHET",
+    "amount": "Full tuition + tools",
+    "deadline": "Ongoing",
+    "level": "TVET",
+    "description": "Bursary for students enrolled at any public TVET college.",
+    "requirements": ["Registered at TVET college","South African citizen"],
+    "link": "https://www.tvetcolleges.co.za"
+  },
+  {
+    "id": 9,
+    "title": "Postgraduate Merit Bursary",
+    "provider": "University of Johannesburg",
+    "amount": "R80,000",
+    "deadline": "30 April 2026",
+    "level": "Postgraduate",
+    "description": "Merit-based bursary for Master’s and Doctoral students.",
+    "requirements": ["Honours degree 70%+","Research proposal"],
+    "link": "https://www.uj.ac.za/bursaries"
+  },
+  {
+    "id": 10,
+    "title": "Motsepe Foundation Bursary",
+    "provider": "Motsepe Foundation",
+    "amount": "Full scholarship",
+    "deadline": "15 March 2026",
+    "level": "Undergraduate",
+    "description": "Full funding for students from disadvantaged communities.",
+    "requirements": ["South African citizen","Financial need"],
+    "link": "https://motsepefoundation.org/bursaries"
+  }
+]

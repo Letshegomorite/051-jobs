@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="051 Jobs – South Africa’s platform for jobs, bursaries and short courses with advanced search.">
+    <title>051 Jobs | Jobs, Bursaries & Short Courses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500&display=swap');
+        .tail-container * { font-family: 'Inter', system_ui, sans-serif; }
+        .logo-font { font-family: 'Space Grotesk', sans-serif; }
+        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 25px 50px -12px rgb(0 212 255 / 0.2); }
+    </style>
+</head>
+<body class="tail-container bg-gray-50">
+
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-x-2">
+                    <div class="w-9 h-9 bg-[#00d4ff] text-white rounded-2xl flex items-center justify-center text-2xl font-bold logo-font">051</div>
+                    <span class="text-3xl font-semibold tracking-[-1px] logo-font text-gray-900">Jobs</span>
+                </a>
+                <div class="hidden md:flex items-center gap-x-8 font-medium text-sm">
+                    <a href="jobs.html" class="hover:text-[#00d4ff]">Jobs</a>
+                    <a href="bursaries.html" class="hover:text-[#00d4ff]">Bursaries</a>
+                    <a href="courses.html" class="hover:text-[#00d4ff]">Short Courses</a>
+                    <a href="about.html" class="hover:text-[#00d4ff]">About</a>
+                    <a href="contact.html" class="hover:text-[#00d4ff]">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-br from-[#0a2540] to-[#00d4ff] text-white py-24">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-semibold logo-font tracking-[-2px] leading-none mb-6">
+                    Your Future Starts Here
+                </h1>
+                <p class="text-xl text-white/90 mb-10">Jobs • Bursaries • Short Courses • Advanced Search</p>
+
+                <div class="bg-white rounded-3xl shadow-2xl p-2 max-w-2xl mx-auto">
+                    <div class="flex items-center px-6 py-4">
+                        <i class="fa-solid fa-magnifying-glass text-[#00d4ff] text-xl mr-4"></i>
+                        <input id="globalSearchInput" type="text" placeholder="Search jobs, bursaries or courses..." 
+                               onkeyup="if(event.key === 'Enter') performGlobalSearch()" 
+                               class="flex-1 bg-transparent outline-none text-gray-900 placeholder-gray-400 text-lg">
+                    </div>
+                </div>
+
+                <div class="flex justify-center gap-8 mt-8 text-sm">
+                    <a href="jobs.html" class="hover:underline">Browse Jobs</a>
+                    <a href="bursaries.html" class="hover:underline">Browse Bursaries</a>
+                    <a href="courses.html" class="hover:underline">Browse Courses</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-screen-2xl mx-auto px-6 py-16">
+        <div id="featuredJobs" class="mb-16"></div>
+        <div id="featuredBursaries" class="mb-16"></div>
+        <div id="featuredCourses"></div>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-12 text-center text-sm">
+        © 2026 051 Jobs • Information only • All applications handled externally
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Google Data Analytics Professional Certificate",
+    "institution": "Google via Coursera",
+    "duration": "6 months",
+    "fee": "R1,200/month",
+    "mode": "Online",
+    "description": "Learn data cleaning, visualisation and analysis using Google Sheets, SQL, R and Tableau.",
+    "requirements": ["No prior experience needed","Basic computer skills"],
+    "link": "https://www.coursera.org/professional-certificates/google-data-analytics"
+  },
+  {
+    "id": 2,
+    "title": "Digital Marketing Short Course",
+    "institution": "UCT GetSmarter",
+    "duration": "8 weeks",
+    "fee": "R9,500",
+    "mode": "Online",
+    "description": "Master SEO, Google Ads, social media strategy and analytics.",
+    "requirements": ["Basic marketing knowledge"],
+    "link": "https://www.getsmarter.com"
+  },
+  {
+    "id": 3,
+    "title": "Project Management (PMP Prep)",
+    "institution": "Regenesys",
+    "duration": "12 weeks",
+    "fee": "R12,000",
+    "mode": "Hybrid",
+    "description": "Comprehensive project management course aligned with PMBOK.",
+    "requirements": ["Matric certificate"],
+    "link": "https://www.regenesys.net"
+  },
+  {
+    "id": 4,
+    "title": "Coding Bootcamp – Full Stack Web Development",
+    "institution": "HyperionDev",
+    "duration": "12 weeks",
+    "fee": "R18,000",
+    "mode": "Online",
+    "description": "Intensive bootcamp covering HTML, CSS, JavaScript, React, Node.js and databases.",
+    "requirements": ["Basic computer literacy"],
+    "link": "https://www.hyperiondev.com"
+  },
+  {
+    "id": 5,
+    "title": "Bookkeeping & Accounting Short Course",
+    "institution": "Damelin",
+    "duration": "6 months",
+    "fee": "R7,800",
+    "mode": "In-person",
+    "description": "Practical bookkeeping and accounting course leading to ICB certification.",
+    "requirements": ["Grade 12"],
+    "link": "https://www.damelin.co.za"
+  },
+  {
+    "id": 6,
+    "title": "Cybersecurity Fundamentals",
+    "institution": "University of Pretoria Online",
+    "duration": "10 weeks",
+    "fee": "R8,500",
+    "mode": "Online",
+    "description": "Introduction to ethical hacking, network security and data protection.",
+    "requirements": ["Basic IT knowledge"],
+    "link": "https://www.up.ac.za/online-courses"
+  },
+  {
+    "id": 7,
+    "title": "Graphic Design with Canva & Adobe",
+    "institution": "Creative Academy",
+    "duration": "4 weeks",
+    "fee": "R4,200",
+    "mode": "Online",
+    "description": "Hands-on course covering branding, social media graphics and print design.",
+    "requirements": ["Creative interest"],
+    "link": "https://creativeacademy.co.za"
+  },
+  {
+    "id": 8,
+    "title": "Supply Chain Management",
+    "institution": "Nelson Mandela University",
+    "duration": "8 weeks",
+    "fee": "R6,500",
+    "mode": "Hybrid",
+    "description": "Short course in logistics, procurement and inventory management.",
+    "requirements": ["Matric"],
+    "link": "https://www.mandela.ac.za/short-courses"
+  },
+  {
+    "id": 9,
+    "title": "English for Business Communication",
+    "institution": "British Council",
+    "duration": "6 weeks",
+    "fee": "R3,800",
+    "mode": "Online",
+    "description": "Improve business writing, presentations and workplace English.",
+    "requirements": ["Intermediate English"],
+    "link": "https://www.britishcouncil.org.za"
+  },
+  {
+    "id": 10,
+    "title": "Electric Vehicle Technician Course",
+    "institution": "Mercedes-Benz SA Academy",
+    "duration": "12 months",
+    "fee": "Fully sponsored",
+    "mode": "In-person",
+    "description": "Learn EV maintenance and diagnostics.",
+    "requirements": ["N3 Engineering","Driver’s licence"],
+    "link": "https://www.mercedes-benz.co.za/careers"
+  }
+]

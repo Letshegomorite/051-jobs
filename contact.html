@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | 051 Jobs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500&display=swap');
+        .tail-container * { font-family: 'Inter', system_ui, sans-serif; }
+        .logo-font { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="tail-container bg-gray-50">
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-x-2">
+                    <div class="w-9 h-9 bg-[#00d4ff] text-white rounded-2xl flex items-center justify-center text-2xl font-bold logo-font">051</div>
+                    <span class="text-3xl font-semibold tracking-[-1px] logo-font text-gray-900">Jobs</span>
+                </a>
+                <div class="hidden md:flex items-center gap-x-8 font-medium text-sm">
+                    <a href="jobs.html">Jobs</a>
+                    <a href="bursaries.html">Bursaries</a>
+                    <a href="courses.html">Short Courses</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html" class="text-[#00d4ff]">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-lg mx-auto px-6 py-20">
+        <h1 class="text-4xl font-semibold mb-8">Contact Us</h1>
+        <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been received.'); this.reset();" class="space-y-6">
+            <input type="text" placeholder="Your name" class="w-full border rounded-3xl px-6 py-4" required>
+            <input type="email" placeholder="Email address" class="w-full border rounded-3xl px-6 py-4" required>
+            <textarea placeholder="Your message or suggestion" rows="6" class="w-full border rounded-3xl px-6 py-4" required></textarea>
+            <button type="submit" class="w-full bg-[#00d4ff] text-white py-4 rounded-3xl font-semibold">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
