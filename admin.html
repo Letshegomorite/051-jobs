@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | 051 Jobs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500&display=swap');
+        .tail-container * { font-family: 'Inter', system_ui, sans-serif; }
+        .logo-font { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="tail-container bg-gray-50">
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="h-16 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-x-2">
+                    <div class="w-9 h-9 bg-[#00d4ff] text-white rounded-2xl flex items-center justify-center text-2xl font-bold logo-font">051</div>
+                    <span class="text-3xl font-semibold tracking-[-1px] logo-font text-gray-900">Jobs</span>
+                </a>
+                <div class="hidden md:flex items-center gap-x-8 font-medium text-sm">
+                    <a href="jobs.html">Jobs</a>
+                    <a href="bursaries.html">Bursaries</a>
+                    <a href="courses.html">Short Courses</a>
+                    <a href="admin.html" class="text-[#00d4ff]">Admin</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-screen-2xl mx-auto px-6 py-10">
+        <h1 class="text-4xl font-semibold mb-8">Admin Panel</h1>
+
+        <section class="bg-white border rounded-3xl p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Add / Edit Job</h2>
+            <form id="jobForm" class="grid md:grid-cols-2 gap-4">
+                <input type="hidden" id="jobId">
+                <input id="jobTitle" class="border rounded-xl p-3" placeholder="Job title" required>
+                <input id="jobCompany" class="border rounded-xl p-3" placeholder="Company" required>
+                <input id="jobLocation" class="border rounded-xl p-3" placeholder="Location">
+                <input id="jobType" class="border rounded-xl p-3" placeholder="Type (Full-time, Contract, etc.)">
+                <input id="jobSalary" class="border rounded-xl p-3" placeholder="Salary">
+                <input id="jobLink" class="border rounded-xl p-3" placeholder="Application link (https://...)" type="url">
+                <textarea id="jobDescription" class="border rounded-xl p-3 md:col-span-2" placeholder="Description" rows="4"></textarea>
+                <textarea id="jobRequirements" class="border rounded-xl p-3 md:col-span-2" placeholder="Requirements (comma separated)" rows="3"></textarea>
+                <div class="md:col-span-2 flex flex-wrap gap-3">
+                    <button class="bg-[#00d4ff] text-white px-5 py-3 rounded-2xl" type="submit">Save Job</button>
+                    <button class="border px-5 py-3 rounded-2xl" type="button" onclick="resetJobForm()">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="bg-white border rounded-3xl p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Data Import / Export</h2>
+            <div class="flex flex-wrap gap-3">
+                <input id="importFile" type="file" accept="application/json" class="border rounded-xl p-2">
+                <button class="border px-4 py-2 rounded-xl" onclick="importJson()">Import JSON</button>
+                <button class="border px-4 py-2 rounded-xl" onclick="exportJson()">Export JSON</button>
+                <button class="border px-4 py-2 rounded-xl text-red-600" onclick="resetAllData()">Reset Data</button>
+            </div>
+            <p id="adminMessage" class="mt-4 text-sm text-gray-600"></p>
+        </section>
+
+        <section class="bg-white border rounded-3xl p-6">
+            <h2 class="text-2xl font-semibold mb-4">Manage Jobs</h2>
+            <div class="overflow-auto">
+                <table class="w-full text-left text-sm">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="py-2">Title</th>
+                            <th class="py-2">Company</th>
+                            <th class="py-2">Type</th>
+                            <th class="py-2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jobsAdminTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
