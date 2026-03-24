@@ -1,4 +1,4 @@
-/* 051 Jobs – Advanced Search for All Pages */
+/* 051 Jobs – Fixed & Improved Advanced Search */
 
 let JOBS = [], BURSARIES = [], COURSES = [];
 
@@ -10,6 +10,7 @@ function debounce(func, delay = 300) {
     };
 }
 
+// Load data with retry for GitHub Pages
 async function loadData() {
     try {
         const [j, b, c] = await Promise.all([
@@ -17,8 +18,15 @@ async function loadData() {
             fetch('bursaries.json').then(r => r.json()),
             fetch('courses.json').then(r => r.json())
         ]);
-        JOBS = j; BURSARIES = b; COURSES = c;
-    } catch(e) { console.error(e); }
+        JOBS = j;
+        BURSARIES = b;
+        COURSES = c;
+        console.log(`✅ Loaded ${JOBS.length} jobs, ${BURSARIES.length} bursaries, ${COURSES.length} courses`);
+        return true;
+    } catch (e) {
+        console.error("Failed to load JSON files:", e);
+        return false;
+    }
 }
 
 function createCard(item, type) {
@@ -45,18 +53,22 @@ function performGlobalSearch() {
     if (query) window.location.href = `jobs.html?search=${encodeURIComponent(query)}`;
 }
 
-// JOBS
+// ====================== JOBS ======================
 let jobFilters = { search: '', types: [], locations: [], page: 1 };
 const JOBS_PER_PAGE = 9;
 
 function renderJobFilters() {
     const types = ['Full-time','Part-time','Contract','Internship'];
     document.getElementById('jobTypeFilters').innerHTML = types.map(t => `
-        <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="checkbox" value="${t}" onchange="toggleJobFilter(this)" class="accent-[#00d4ff]"> ${t}</label>`).join('');
+        <label class="flex items-center gap-2 cursor-pointer text-sm">
+            <input type="checkbox" value="${t}" onchange="toggleJobFilter(this)" class="accent-[#00d4ff]"> ${t}
+        </label>`).join('');
 
     const locs = ['Johannesburg','Cape Town','Durban','Pretoria','Bloemfontein','Remote'];
     document.getElementById('jobLocationFilters').innerHTML = locs.map(l => `
-        <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="checkbox" value="${l}" onchange="toggleJobFilter(this)" class="accent-[#00d4ff]"> ${l}</label>`).join('');
+        <label class="flex items-center gap-2 cursor-pointer text-sm">
+            <input type="checkbox" value="${l}" onchange="toggleJobFilter(this)" class="accent-[#00d4ff]"> ${l}
+        </label>`).join('');
 }
 
 function toggleJobFilter(el) {
@@ -75,13 +87,17 @@ const debouncedJobSearch = debounce(() => { jobFilters.page = 1; filterAndRender
 
 function filterAndRenderJobs() {
     const searchTerm = (document.getElementById('jobsSearchInput')?.value || '').toLowerCase().trim();
+
     let filtered = JOBS.filter(job => {
         const matchesSearch = !searchTerm || 
             job.title.toLowerCase().includes(searchTerm) ||
             (job.company && job.company.toLowerCase().includes(searchTerm)) ||
             job.description.toLowerCase().includes(searchTerm);
+
         const matchesType = jobFilters.types.length === 0 || jobFilters.types.includes(job.type);
-        const matchesLocation = jobFilters.locations.length === 0 || jobFilters.locations.some(loc => job.location.toLowerCase().includes(loc.toLowerCase()));
+        const matchesLocation = jobFilters.locations.length === 0 || 
+            jobFilters.locations.some(loc => job.location.toLowerCase().includes(loc.toLowerCase()));
+
         return matchesSearch && matchesType && matchesLocation;
     });
 
@@ -103,19 +119,21 @@ function goToJobPage(p) { jobFilters.page = p; filterAndRenderJobs(); }
 
 function clearJobFilters() {
     jobFilters = { search: '', types: [], locations: [], page: 1 };
-    document.getElementById('jobsSearchInput').value = '';
+    if (document.getElementById('jobsSearchInput')) document.getElementById('jobsSearchInput').value = '';
     renderJobFilters();
     filterAndRenderJobs();
 }
 
-// BURSARIES
+// ====================== BURSARIES ======================
 let bursaryFilters = { search: '', levels: [], page: 1 };
 const BURSARIES_PER_PAGE = 9;
 
 function renderBursaryFilters() {
     const levels = ['Undergraduate','Postgraduate','TVET','High School'];
     document.getElementById('bursaryLevelFilters').innerHTML = levels.map(l => `
-        <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="checkbox" value="${l}" onchange="toggleBursaryFilter(this)" class="accent-[#00d4ff]"> ${l}</label>`).join('');
+        <label class="flex items-center gap-2 cursor-pointer text-sm">
+            <input type="checkbox" value="${l}" onchange="toggleBursaryFilter(this)" class="accent-[#00d4ff]"> ${l}
+        </label>`).join('');
 }
 
 function toggleBursaryFilter(el) {
@@ -156,19 +174,21 @@ function goToBursaryPage(p) { bursaryFilters.page = p; filterAndRenderBursaries(
 
 function clearBursaryFilters() {
     bursaryFilters = { search: '', levels: [], page: 1 };
-    document.getElementById('bursariesSearchInput').value = '';
+    if (document.getElementById('bursariesSearchInput')) document.getElementById('bursariesSearchInput').value = '';
     renderBursaryFilters();
     filterAndRenderBursaries();
 }
 
-// COURSES
+// ====================== COURSES ======================
 let courseFilters = { search: '', modes: [], page: 1 };
 const COURSES_PER_PAGE = 9;
 
 function renderCourseFilters() {
     const modes = ['Online','In-person','Hybrid'];
     document.getElementById('courseModeFilters').innerHTML = modes.map(m => `
-        <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="checkbox" value="${m}" onchange="toggleCourseFilter(this)" class="accent-[#00d4ff]"> ${m}</label>`).join('');
+        <label class="flex items-center gap-2 cursor-pointer text-sm">
+            <input type="checkbox" value="${m}" onchange="toggleCourseFilter(this)" class="accent-[#00d4ff]"> ${m}
+        </label>`).join('');
 }
 
 function toggleCourseFilter(el) {
@@ -209,26 +229,37 @@ function goToCoursePage(p) { courseFilters.page = p; filterAndRenderCourses(); }
 
 function clearCourseFilters() {
     courseFilters = { search: '', modes: [], page: 1 };
-    document.getElementById('coursesSearchInput').value = '';
+    if (document.getElementById('coursesSearchInput')) document.getElementById('coursesSearchInput').value = '';
     renderCourseFilters();
     filterAndRenderCourses();
 }
 
+// Featured
 async function renderFeatured() {
     await loadData();
-    document.getElementById('featuredJobs').innerHTML = `
-        <h2 class="text-3xl font-semibold mb-8">Featured Jobs</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${JOBS.slice(0,3).map(j => createCard(j,'job')).join('')}</div>`;
-    document.getElementById('featuredBursaries').innerHTML = `
-        <h2 class="text-3xl font-semibold mb-8">Featured Bursaries</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${BURSARIES.slice(0,3).map(b => createCard(b,'bursary')).join('')}</div>`;
-    document.getElementById('featuredCourses').innerHTML = `
-        <h2 class="text-3xl font-semibold mb-8">Featured Short Courses</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${COURSES.slice(0,3).map(c => createCard(c,'course')).join('')}</div>`;
+    if (document.getElementById('featuredJobs')) {
+        document.getElementById('featuredJobs').innerHTML = `
+            <h2 class="text-3xl font-semibold mb-8">Featured Jobs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${JOBS.slice(0,3).map(j => createCard(j,'job')).join('')}</div>`;
+    }
+    if (document.getElementById('featuredBursaries')) {
+        document.getElementById('featuredBursaries').innerHTML = `
+            <h2 class="text-3xl font-semibold mb-8">Featured Bursaries</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${BURSARIES.slice(0,3).map(b => createCard(b,'bursary')).join('')}</div>`;
+    }
+    if (document.getElementById('featuredCourses')) {
+        document.getElementById('featuredCourses').innerHTML = `
+            <h2 class="text-3xl font-semibold mb-8">Featured Short Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${COURSES.slice(0,3).map(c => createCard(c,'course')).join('')}</div>`;
+    }
 }
 
 async function start() {
-    await loadData();
+    const loaded = await loadData();
+    if (!loaded) {
+        console.error("Could not load JSON files. Check that jobs.json, bursaries.json and courses.json are in the same folder.");
+        return;
+    }
 
     if (document.getElementById('featuredJobs')) renderFeatured();
 
