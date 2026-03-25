@@ -11,131 +11,128 @@
         .tail-container * { font-family: 'Inter', system_ui, sans-serif; }
         .logo-font { font-family: 'Space Grotesk', sans-serif; }
         .glass {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
         }
-        .soft-shadow { box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08); }
+        .soft-shadow { box-shadow: 0 20px 45px rgba(15, 23, 42, 0.18); }
     </style>
     <link rel="stylesheet" href="theme.css">
 </head>
-<body class="tail-container bg-slate-100 text-slate-800">
-    <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(0,212,255,0.18),transparent_45%),radial-gradient(circle_at_80%_5%,rgba(99,102,241,0.15),transparent_40%),radial-gradient(circle_at_60%_80%,rgba(45,212,191,0.14),transparent_35%)]"></div>
+<body class="tail-container bg-slate-100 text-slate-100">
+    <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(37,99,235,0.2),transparent_45%),radial-gradient(circle_at_80%_5%,rgba(59,130,246,0.12),transparent_40%),radial-gradient(circle_at_60%_80%,rgba(30,64,175,0.16),transparent_35%)]"></div>
 
     <nav class="glass border-b sticky top-0 z-50">
         <div class="max-w-screen-2xl mx-auto px-6">
             <div class="h-16 flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-x-2">
-                    <div class="w-9 h-9 bg-[#00d4ff] text-white rounded-2xl flex items-center justify-center text-2xl font-bold logo-font">051</div>
-                    <span class="text-3xl font-semibold tracking-[-1px] logo-font text-slate-900">Jobs</span>
+                    <div class="w-9 h-9 bg-blue-700 text-white rounded-2xl flex items-center justify-center text-2xl font-bold logo-font">051</div>
+                    <span class="text-3xl font-semibold tracking-[-1px] logo-font text-slate-100">Jobs</span>
                 </a>
-                <div class="hidden md:flex items-center gap-x-8 font-medium text-sm text-slate-600">
+                <div class="hidden md:flex items-center gap-x-8 font-medium text-sm text-slate-300">
                     <a href="jobs.html">Jobs</a>
                     <a href="bursaries.html">Bursaries</a>
                     <a href="courses.html">Short Courses</a>
-                    <a href="admin.html" class="text-[#00d4ff]">Admin</a>
+                    <a href="admin.html" class="text-blue-300">Admin</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <main class="max-w-screen-2xl mx-auto px-6 py-10 space-y-8">
-        <section class="rounded-3xl p-7 bg-gradient-to-r from-slate-900 via-slate-800 to-cyan-900 text-white soft-shadow">
+        <section class="rounded-3xl p-7 bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white soft-shadow border border-blue-900/60">
             <h1 class="text-4xl font-semibold mb-3">Admin Command Center</h1>
-            <p class="text-sm text-slate-200">Simple workflow: add/update jobs, track expired closing dates instantly, and upload jobs, bursaries, or courses in one place.</p>
-            <p class="mt-3 text-xs text-cyan-200">Use your admin username and password to sign in and manage listings securely</p>
+            <p class="text-sm text-slate-200">Add and update jobs, manage expired listings, and import/export jobs, bursaries, and courses in one place.</p>
         </section>
 
-
-        <section id="adminLoginPanel" class="glass border border-white/50 rounded-3xl p-6 soft-shadow max-w-xl">
+        <section id="adminLoginPanel" class="glass border border-slate-700 rounded-3xl p-6 soft-shadow max-w-xl">
             <h2 class="text-2xl font-semibold mb-3">Admin Sign In</h2>
-            <p class="text-sm text-slate-600 mb-4">Sign in to restore admin access through the website interface. Username: admin | Password: 59862010</p>
+            <p class="text-sm text-slate-300 mb-4">Sign in to access admin tools. Username: <strong>admin</strong> | Password: <strong>59862010</strong></p>
             <form id="adminLoginForm" class="space-y-3">
                 <input id="adminUsername" class="w-full border rounded-xl p-3" placeholder="Admin username" autocomplete="username" required>
                 <input id="adminPassword" class="w-full border rounded-xl p-3" placeholder="Admin password" type="password" autocomplete="current-password" required>
-                <button class="bg-[#00d4ff] text-white px-5 py-3 rounded-2xl" type="submit">Sign In</button>
-                <p id="adminLoginMessage" class="text-sm text-red-600 hidden">Invalid credentials. Please try again.</p>
+                <button class="bg-blue-700 text-white px-5 py-3 rounded-2xl" type="submit">Sign In</button>
+                <p id="adminLoginMessage" class="text-sm text-red-400 hidden">Invalid credentials. Please try again.</p>
             </form>
         </section>
 
         <div id="adminContent" class="space-y-8 hidden">
+            <section class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4" id="statsCards"></section>
 
-        <section class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4" id="statsCards"></section>
-
-        <section class="glass border border-white/50 rounded-3xl p-6 soft-shadow">
-            <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
-                <h2 class="text-2xl font-semibold">Expired Job Closing Dates</h2>
-                <button class="border border-red-200 text-red-700 px-4 py-2 rounded-xl text-sm" type="button" onclick="deleteAllExpiredJobs()">Delete All Expired</button>
-            </div>
-            <p class="text-sm text-slate-600 mb-4">These jobs are already past their closing date and can be removed quickly.</p>
-            <div id="expiredJobsList" class="space-y-3"></div>
-        </section>
-
-        <section class="glass border border-white/50 rounded-3xl p-6 soft-shadow">
-            <h2 class="text-2xl font-semibold mb-4">Add / Edit Job</h2>
-            <form id="jobForm" class="grid md:grid-cols-2 gap-4">
-                <input type="hidden" id="jobId">
-                <input id="jobTitle" class="border rounded-xl p-3" placeholder="Job title" required>
-                <input id="jobCompany" class="border rounded-xl p-3" placeholder="Company" required>
-                <input id="jobLocation" class="border rounded-xl p-3" placeholder="Location">
-                <input id="jobType" class="border rounded-xl p-3" placeholder="Type (Full-time, Contract, etc.)">
-                <input id="jobSalary" class="border rounded-xl p-3" placeholder="Salary">
-                <input id="jobClosingDate" class="border rounded-xl p-3" type="date" placeholder="Closing date">
-                <input id="jobLink" class="border rounded-xl p-3 md:col-span-2" placeholder="Application link (https://...)" type="url">
-                <textarea id="jobDescription" class="border rounded-xl p-3 md:col-span-2" placeholder="Description" rows="4"></textarea>
-                <textarea id="jobRequirements" class="border rounded-xl p-3 md:col-span-2" placeholder="Requirements (comma separated)" rows="3"></textarea>
-                <div class="md:col-span-2 flex flex-wrap gap-3">
-                    <button class="bg-[#00d4ff] text-white px-5 py-3 rounded-2xl" type="submit">Save Job</button>
-                    <button class="border px-5 py-3 rounded-2xl" type="button" onclick="resetJobForm()">Clear</button>
+            <section class="glass border border-slate-700 rounded-3xl p-6 soft-shadow">
+                <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
+                    <h2 class="text-2xl font-semibold">Expired Job Closing Dates</h2>
+                    <button class="border border-red-400/40 text-red-300 px-4 py-2 rounded-xl text-sm" type="button" onclick="deleteAllExpiredJobs()">Delete All Expired</button>
                 </div>
-            </form>
-        </section>
+                <p class="text-sm text-slate-300 mb-4">These jobs are already past their closing date and can be removed quickly.</p>
+                <div id="expiredJobsList" class="space-y-3"></div>
+            </section>
 
-        <section class="glass border border-white/50 rounded-3xl p-6 soft-shadow">
-            <h2 class="text-2xl font-semibold mb-4">Upload / Import Data</h2>
-            <div class="grid md:grid-cols-2 gap-4 items-end">
-                <label class="text-sm text-slate-600">Upload target
-                    <select id="importTarget" class="w-full mt-2 border rounded-xl p-3">
-                        <option value="all">All data (jobs, bursaries, courses)</option>
-                        <option value="jobs">Jobs only</option>
-                        <option value="bursaries">Bursaries only</option>
-                        <option value="courses">Courses only</option>
-                    </select>
-                </label>
-                <input id="importFile" type="file" accept="application/json" class="border rounded-xl p-2 bg-white">
-            </div>
-            <div class="flex flex-wrap gap-3 mt-4">
-                <button class="border px-4 py-2 rounded-xl" onclick="importJson()">Upload JSON</button>
-                <button class="border px-4 py-2 rounded-xl" onclick="exportJson()">Export JSON</button>
-                <button class="border px-4 py-2 rounded-xl text-red-600" onclick="resetAllData()">Reset Data</button>
-            </div>
-            <p id="adminMessage" class="mt-4 text-sm text-slate-600"></p>
-        </section>
+            <section class="glass border border-slate-700 rounded-3xl p-6 soft-shadow">
+                <h2 class="text-2xl font-semibold mb-4">Add / Edit Job</h2>
+                <form id="jobForm" class="grid md:grid-cols-2 gap-4">
+                    <input type="hidden" id="jobId">
+                    <input id="jobTitle" class="border rounded-xl p-3" placeholder="Job title" required>
+                    <input id="jobCompany" class="border rounded-xl p-3" placeholder="Company" required>
+                    <input id="jobLocation" class="border rounded-xl p-3" placeholder="Location">
+                    <input id="jobType" class="border rounded-xl p-3" placeholder="Type (Full-time, Contract, etc.)">
+                    <input id="jobSalary" class="border rounded-xl p-3" placeholder="Salary">
+                    <input id="jobClosingDate" class="border rounded-xl p-3" type="date" placeholder="Closing date">
+                    <input id="jobLink" class="border rounded-xl p-3 md:col-span-2" placeholder="Application link (https://...)" type="url">
+                    <textarea id="jobDescription" class="border rounded-xl p-3 md:col-span-2" placeholder="Description" rows="4"></textarea>
+                    <textarea id="jobRequirements" class="border rounded-xl p-3 md:col-span-2" placeholder="Requirements (comma separated)" rows="3"></textarea>
+                    <div class="md:col-span-2 flex flex-wrap gap-3">
+                        <button class="bg-blue-700 text-white px-5 py-3 rounded-2xl" type="submit">Save Job</button>
+                        <button class="border px-5 py-3 rounded-2xl" type="button" onclick="resetJobForm()">Clear</button>
+                    </div>
+                </form>
+            </section>
 
-        <section class="glass border border-white/50 rounded-3xl p-6 soft-shadow">
-            <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
-                <h2 class="text-2xl font-semibold">Manage Listings</h2>
-                <div class="flex gap-2 flex-wrap">
-                    <button type="button" class="collection-tab border px-4 py-2 rounded-xl text-sm" data-collection="jobs">Jobs</button>
-                    <button type="button" class="collection-tab border px-4 py-2 rounded-xl text-sm" data-collection="bursaries">Bursaries</button>
-                    <button type="button" class="collection-tab border px-4 py-2 rounded-xl text-sm" data-collection="courses">Courses</button>
+            <section class="glass border border-slate-700 rounded-3xl p-6 soft-shadow">
+                <h2 class="text-2xl font-semibold mb-4">Upload / Import Data</h2>
+                <div class="grid md:grid-cols-2 gap-4 items-end">
+                    <label class="text-sm text-slate-300">Upload target
+                        <select id="importTarget" class="w-full mt-2 border rounded-xl p-3">
+                            <option value="all">All data (jobs, bursaries, courses)</option>
+                            <option value="jobs">Jobs only</option>
+                            <option value="bursaries">Bursaries only</option>
+                            <option value="courses">Courses only</option>
+                        </select>
+                    </label>
+                    <input id="importFile" type="file" accept="application/json" class="border rounded-xl p-2">
                 </div>
-            </div>
-            <div class="overflow-auto">
-                <table class="w-full text-left text-sm">
-                    <thead>
-                        <tr class="border-b text-slate-600">
-                            <th class="py-2">Title</th>
-                            <th class="py-2">Organisation</th>
-                            <th class="py-2">Type</th>
-                            <th class="py-2">Closing</th>
-                            <th class="py-2">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="jobsAdminTable"></tbody>
-                </table>
-            </div>
-        </section>
+                <div class="flex flex-wrap gap-3 mt-4">
+                    <button class="border px-4 py-2 rounded-xl" onclick="importJson()">Upload JSON</button>
+                    <button class="border px-4 py-2 rounded-xl" onclick="exportJson()">Export JSON</button>
+                    <button class="border px-4 py-2 rounded-xl text-red-300" onclick="resetAllData()">Reset Data</button>
+                </div>
+                <p id="adminMessage" class="mt-4 text-sm text-slate-300"></p>
+            </section>
+
+            <section class="glass border border-slate-700 rounded-3xl p-6 soft-shadow">
+                <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
+                    <h2 class="text-2xl font-semibold">Manage Listings</h2>
+                    <div class="flex gap-2 flex-wrap">
+                        <button type="button" class="collection-tab border px-4 py-2 rounded-xl text-sm" data-collection="jobs">Jobs</button>
+                        <button type="button" class="collection-tab border px-4 py-2 rounded-xl text-sm" data-collection="bursaries">Bursaries</button>
+                        <button type="button" class="collection-tab border px-4 py-2 rounded-xl text-sm" data-collection="courses">Courses</button>
+                    </div>
+                </div>
+                <div class="overflow-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="border-b text-slate-300">
+                                <th class="py-2">Title</th>
+                                <th class="py-2">Organisation</th>
+                                <th class="py-2">Type</th>
+                                <th class="py-2">Closing</th>
+                                <th class="py-2">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="jobsAdminTable"></tbody>
+                    </table>
+                </div>
+            </section>
         </div>
     </main>
 
