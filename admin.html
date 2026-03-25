@@ -53,6 +53,33 @@
                 <button class="bg-blue-700 text-white px-5 py-3 rounded-2xl" type="submit">Sign In</button>
                 <p id="adminLoginMessage" class="text-sm text-red-400 hidden">Invalid credentials. Please try again.</p>
             </form>
+            <p class="text-sm text-slate-200">Simple workflow: add/update jobs, track expired closing dates instantly, and upload jobs, bursaries, or courses in one place.</p>
+            <p class="mt-3 text-xs text-cyan-200">Use your admin username and password to sign in and manage listings securely</p>
+        </section>
+
+
+        <section id="adminLoginPanel" class="glass border border-white/50 rounded-3xl p-6 soft-shadow max-w-xl">
+            <h2 class="text-2xl font-semibold mb-3">Admin Sign In</h2>
+            <p class="text-sm text-slate-600 mb-4">Sign in to restore admin access through the website interface.</p>
+            <form id="adminLoginForm" class="space-y-3">
+                <input id="adminUsername" class="w-full border rounded-xl p-3" placeholder="Admin username" autocomplete="username" required>
+                <input id="adminPassword" class="w-full border rounded-xl p-3" placeholder="Admin password" type="password" autocomplete="current-password" required>
+                <button class="bg-[#00d4ff] text-white px-5 py-3 rounded-2xl" type="submit">Sign In</button>
+                <p id="adminLoginMessage" class="text-sm text-red-600 hidden">Invalid credentials. Please try again.</p>
+            </form>
+        </section>
+
+        <div id="adminContent" class="space-y-8 hidden">
+
+        <section class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4" id="statsCards"></section>
+
+        <section class="glass border border-white/50 rounded-3xl p-6 soft-shadow">
+            <div class="flex items-center justify-between gap-4 mb-4 flex-wrap">
+                <h2 class="text-2xl font-semibold">Expired Job Closing Dates</h2>
+                <button class="border border-red-200 text-red-700 px-4 py-2 rounded-xl text-sm" type="button" onclick="deleteAllExpiredJobs()">Delete All Expired</button>
+            </div>
+            <p class="text-sm text-slate-600 mb-4">These jobs are already past their closing date and can be removed quickly.</p>
+            <div id="expiredJobsList" class="space-y-3"></div>
         </section>
 
         <div id="adminContent" class="space-y-8 hidden">
@@ -132,6 +159,22 @@
                     </table>
                 </div>
             </section>
+            </div>
+            <div class="overflow-auto">
+                <table class="w-full text-left text-sm">
+                    <thead>
+                        <tr class="border-b text-slate-600">
+                            <th class="py-2">Title</th>
+                            <th class="py-2">Organisation</th>
+                            <th class="py-2">Type</th>
+                            <th class="py-2">Closing</th>
+                            <th class="py-2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jobsAdminTable"></tbody>
+                </table>
+            </div>
+        </section>
         </div>
     </main>
 
