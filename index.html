@@ -12,31 +12,32 @@
         .tail-container * { font-family: 'Inter', system_ui, sans-serif; }
         .logo-font { font-family: 'Space Grotesk', sans-serif; }
         .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 25px 50px -12px rgb(0 212 255 / 0.2); }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 25px 50px -12px rgb(30 64 175 / 0.25); }
     </style>
 </head>
-<body class="tail-container bg-gray-50">
+<body class="tail-container bg-slate-100">
 
     <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div class="max-w-screen-2xl mx-auto px-6">
             <div class="h-16 flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-x-2">
-                    <div class="w-9 h-9 bg-[#00d4ff] text-white rounded-2xl flex items-center justify-center text-2xl font-bold logo-font">051</div>
+                    <div class="w-9 h-9 bg-blue-800 text-white rounded-2xl flex items-center justify-center text-2xl font-bold logo-font">051</div>
                     <span class="text-3xl font-semibold tracking-[-1px] logo-font text-gray-900">Jobs</span>
                 </a>
                 <div class="hidden md:flex items-center gap-x-6 font-medium text-sm">
-                    <a href="jobs.html" class="hover:text-[#00d4ff]">Jobs</a>
-                    <a href="bursaries.html" class="hover:text-[#00d4ff]">Bursaries</a>
-                    <a href="courses.html" class="hover:text-[#00d4ff]">Short Courses</a>
-                    <a href="how-to-write-a-cv-south-africa.html" class="hover:text-[#00d4ff]">CV Guide</a>
-                    <a href="about.html" class="hover:text-[#00d4ff]">About</a>
-                    <a href="contact.html" class="hover:text-[#00d4ff]">Contact</a>
+                    <a href="jobs.html" class="hover:text-blue-700">Jobs</a>
+                    <a href="bursaries.html" class="hover:text-blue-700">Bursaries</a>
+                    <a href="courses.html" class="hover:text-blue-700">Short Courses</a>
+                    <a href="how-to-write-a-cv-south-africa.html" class="hover:text-blue-700">CV Guide</a>
+                    <a href="about.html" class="hover:text-blue-700">About</a>
+                    <a href="contact.html" class="hover:text-blue-700">Contact</a>
+                    <a href="admin.html" class="hover:text-blue-700">Admin</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <header class="bg-gradient-to-br from-[#0a2540] to-[#00d4ff] text-white py-24">
+    <header class="bg-gradient-to-br from-slate-950 via-blue-900 to-blue-700 text-white py-24">
         <div class="max-w-screen-2xl mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center">
                 <h1 class="text-5xl md:text-6xl font-semibold logo-font tracking-[-2px] leading-none mb-6">Find Trusted South African Opportunities</h1>
@@ -44,7 +45,7 @@
 
                 <div class="bg-white rounded-3xl shadow-2xl p-2 max-w-2xl mx-auto">
                     <div class="flex items-center px-6 py-4">
-                        <i class="fa-solid fa-magnifying-glass text-[#00d4ff] text-xl mr-4"></i>
+                        <i class="fa-solid fa-magnifying-glass text-blue-700 text-xl mr-4"></i>
                         <input id="globalSearchInput" type="text" placeholder="Search jobs, bursaries or courses..." onkeyup="if(event.key === 'Enter') performGlobalSearch()" class="flex-1 bg-transparent outline-none text-gray-900 placeholder-gray-400 text-lg">
                     </div>
                 </div>
@@ -76,6 +77,7 @@
                 <a href="privacy.html" class="hover:underline">Privacy Policy</a>
                 <a href="terms.html" class="hover:underline">Terms & Conditions</a>
                 <a href="disclaimer.html" class="hover:underline">Disclaimer</a>
+                <a href="admin.html" class="hover:underline">Admin Access</a>
             </div>
         </div>
     </footer>
