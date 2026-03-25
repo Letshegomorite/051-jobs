@@ -10,17 +10,12 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500&display=swap');
         .tail-container * { font-family: 'Inter', system_ui, sans-serif; }
     </style>
-    <link rel="stylesheet" href="theme.css">
 </head>
 <body class="tail-container bg-slate-950 text-slate-100">
     <main class="max-w-xl mx-auto px-6 py-16">
         <section class="rounded-3xl border border-slate-800 bg-slate-900/70 p-8">
             <h1 class="text-4xl font-semibold mb-4">Contact Us</h1>
-            <p class="text-slate-300 mb-6">
-                Use the form below for factual corrections, partnerships, or listing concerns.
-                Direct personal email addresses and phone numbers are not displayed on this site.
-            </p>
-
+            <p class="text-slate-300 mb-6">Use the form below for factual corrections, partnerships, or listing concerns. Direct personal email addresses and phone numbers are not displayed on this site.</p>
             <form id="contactForm" class="space-y-4">
                 <input type="text" required placeholder="Your name" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3">
                 <input type="email" required placeholder="Email address" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3">
@@ -28,11 +23,9 @@
                 <button class="bg-blue-700 hover:bg-blue-600 text-white px-5 py-3 rounded-xl" type="submit">Send Message</button>
                 <p id="contactMessage" class="text-green-400 text-sm hidden">Thanks, your message has been received. We will respond via the email you provided.</p>
             </form>
-
             <p class="mt-6"><a href="index.html" class="text-blue-300 hover:text-blue-200">← Back to Home</a></p>
         </section>
     </main>
-
     <script>
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
