@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="051 Jobs – South Africa’s platform for jobs, bursaries and short courses with advanced search.">
-    <title>051 Jobs | Jobs, Bursaries & Short Courses</title>
+    <meta name="description" content="051 Jobs is a South African opportunities platform with jobs, bursaries, courses and practical career guides.">
+    <title>051 Jobs | Jobs, Bursaries, Courses & Career Guides in South Africa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -24,14 +24,13 @@
                     <div class="w-9 h-9 bg-[#00d4ff] text-white rounded-2xl flex items-center justify-center text-2xl font-bold logo-font">051</div>
                     <span class="text-3xl font-semibold tracking-[-1px] logo-font text-gray-900">Jobs</span>
                 </a>
-                <div class="hidden md:flex items-center gap-x-8 font-medium text-sm">
+                <div class="hidden md:flex items-center gap-x-6 font-medium text-sm">
                     <a href="jobs.html" class="hover:text-[#00d4ff]">Jobs</a>
                     <a href="bursaries.html" class="hover:text-[#00d4ff]">Bursaries</a>
                     <a href="courses.html" class="hover:text-[#00d4ff]">Short Courses</a>
+                    <a href="how-to-write-a-cv-south-africa.html" class="hover:text-[#00d4ff]">CV Guide</a>
                     <a href="about.html" class="hover:text-[#00d4ff]">About</a>
                     <a href="contact.html" class="hover:text-[#00d4ff]">Contact</a>
-                    <a href="privacy.html" class="hover:text-[#00d4ff]">Privacy</a>
-                    <a href="admin.html" class="hover:text-[#00d4ff]">Admin</a>
                 </div>
             </div>
         </div>
@@ -40,40 +39,44 @@
     <header class="bg-gradient-to-br from-[#0a2540] to-[#00d4ff] text-white py-24">
         <div class="max-w-screen-2xl mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-5xl md:text-6xl font-semibold logo-font tracking-[-2px] leading-none mb-6">
-                    Your Future Starts Here
-                </h1>
-                <p class="text-xl text-white/90 mb-10">Jobs • Bursaries • Short Courses • Advanced Search</p>
+                <h1 class="text-5xl md:text-6xl font-semibold logo-font tracking-[-2px] leading-none mb-6">Find Trusted South African Opportunities</h1>
+                <p class="text-xl text-white/90 mb-10">Jobs • Bursaries • Courses • Career Guides</p>
 
                 <div class="bg-white rounded-3xl shadow-2xl p-2 max-w-2xl mx-auto">
                     <div class="flex items-center px-6 py-4">
                         <i class="fa-solid fa-magnifying-glass text-[#00d4ff] text-xl mr-4"></i>
-                        <input id="globalSearchInput" type="text" placeholder="Search jobs, bursaries or courses..." 
-                               onkeyup="if(event.key === 'Enter') performGlobalSearch()" 
-                               class="flex-1 bg-transparent outline-none text-gray-900 placeholder-gray-400 text-lg">
+                        <input id="globalSearchInput" type="text" placeholder="Search jobs, bursaries or courses..." onkeyup="if(event.key === 'Enter') performGlobalSearch()" class="flex-1 bg-transparent outline-none text-gray-900 placeholder-gray-400 text-lg">
                     </div>
-                </div>
-
-                <div class="flex justify-center gap-8 mt-8 text-sm">
-                    <a href="jobs.html" class="hover:underline">Browse Jobs</a>
-                    <a href="bursaries.html" class="hover:underline">Browse Bursaries</a>
-                    <a href="courses.html" class="hover:underline">Browse Courses</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="max-w-screen-2xl mx-auto px-6 py-16">
-        <div id="featuredJobs" class="mb-16"></div>
-        <div id="featuredBursaries" class="mb-16"></div>
-        <div id="featuredCourses"></div>
-    </div>
+    <main class="max-w-screen-2xl mx-auto px-6 py-16 space-y-16">
+        <section>
+            <h2 class="text-3xl font-semibold mb-5">Featured Jobs</h2>
+            <div id="featuredJobs" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"><p class="text-gray-600">Loading jobs...</p></div>
+        </section>
+        <section>
+            <h2 class="text-3xl font-semibold mb-5">Featured Bursaries</h2>
+            <div id="featuredBursaries" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"><p class="text-gray-600">Loading bursaries...</p></div>
+        </section>
+        <section>
+            <h2 class="text-3xl font-semibold mb-5">Featured Courses</h2>
+            <div id="featuredCourses" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"><p class="text-gray-600">Loading courses...</p></div>
+        </section>
+    </main>
 
-    <footer class="bg-gray-900 text-white py-12 text-center text-sm">
-        <p>© 2026 051 Jobs • Information only • All applications handled externally</p>
-        <div class="mt-3 flex justify-center gap-6">
-            <a href="privacy.html" class="hover:underline">Privacy Policy</a>
-            <a href="admin.html" class="hover:underline">Admin Login</a>
+    <footer class="bg-gray-900 text-white py-12 text-sm">
+        <div class="max-w-screen-2xl mx-auto px-6 text-center">
+            <p>© 2026 051 Jobs. We publish independent opportunity information and link only to official application channels.</p>
+            <div class="mt-4 flex flex-wrap justify-center gap-4">
+                <a href="about.html" class="hover:underline">About Us</a>
+                <a href="contact.html" class="hover:underline">Contact Us</a>
+                <a href="privacy.html" class="hover:underline">Privacy Policy</a>
+                <a href="terms.html" class="hover:underline">Terms & Conditions</a>
+                <a href="disclaimer.html" class="hover:underline">Disclaimer</a>
+            </div>
         </div>
     </footer>
 
