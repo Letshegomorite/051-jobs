@@ -1,0 +1,56 @@
+:root {
+  --bg: #020617;
+  --panel: #0f172a;
+  --panel-soft: #111c33;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --primary: #2563eb;
+  --primary-2: #1d4ed8;
+  --border: #1e293b;
+}
+
+body {
+  background: radial-gradient(circle at 20% 0%, rgba(37, 99, 235, 0.2), transparent 35%), var(--bg) !important;
+  color: var(--text);
+}
+
+nav {
+  background: rgba(15, 23, 42, 0.92) !important;
+  border-color: var(--border) !important;
+  backdrop-filter: blur(6px);
+}
+
+nav a, footer a { color: var(--text); }
+nav a:hover, footer a:hover { color: #93c5fd !important; }
+
+footer {
+  background: #020617 !important;
+  border-top: 1px solid var(--border);
+}
+
+.bg-white, .glass {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.88)) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+.text-gray-900, .text-slate-900, .text-gray-700, .text-slate-700, .text-slate-600, .text-gray-600 {
+  color: var(--text) !important;
+}
+
+input, textarea, select {
+  background: #020617 !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+button, .bg-\[\#00d4ff\] {
+  background: var(--primary) !important;
+  color: white !important;
+}
+
+button:hover, .bg-\[\#00d4ff\]:hover {
+  background: var(--primary-2) !important;
+}
+
+.border, .border-b, .border-t { border-color: var(--border) !important; }
