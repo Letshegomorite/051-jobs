@@ -5,7 +5,7 @@ const STORAGE_KEYS = {
 };
 
 const ADMIN_CREDENTIALS = {
-    email: 'admin@BPG.com',
+    username: 'admin',
     password: '59862010'
 };
 
@@ -371,28 +371,37 @@ function setupCollectionTabs() {
     });
 }
 
+function setAuthenticatedUI(isAuthenticated) {
+    const content = document.getElementById('adminContent');
+    const panel = document.getElementById('adminLoginPanel');
+    if (content) content.classList.toggle('hidden', !isAuthenticated);
+    if (panel) panel.classList.toggle('hidden', isAuthenticated);
+}
+
+function onAdminLogin(event) {
+    event.preventDefault();
+    const username = document.getElementById('adminUsername')?.value?.trim();
+    const password = document.getElementById('adminPassword')?.value;
+    const loginMessage = document.getElementById('adminLoginMessage');
+
+    if (username !== ADMIN_CREDENTIALS.username || password !== ADMIN_CREDENTIALS.password) {
+        if (loginMessage) loginMessage.classList.remove('hidden');
+        return;
+    }
+
+    if (loginMessage) loginMessage.classList.add('hidden');
+    setAuthenticatedUI(true);
+    showMessage('Signed in successfully.');
+}
+
 async function startAdmin() {
     try {
-        const email = window.prompt('Admin Email');
-        const password = window.prompt('Admin Password');
-
-        if (email !== ADMIN_CREDENTIALS.email || password !== ADMIN_CREDENTIALS.password) {
-            document.body.innerHTML = `
-                <main class="min-h-screen flex items-center justify-center px-6">
-                    <div class="bg-white border rounded-3xl p-8 text-center max-w-lg w-full">
-                        <h1 class="text-3xl font-semibold mb-3">Access Denied</h1>
-                        <p class="text-slate-600 mb-5">The email or password provided is incorrect.</p>
-                        <a href="index.html" class="inline-block bg-[#00d4ff] text-white px-5 py-3 rounded-2xl">Go Home</a>
-                    </div>
-                </main>
-            `;
-            return;
-        }
-
         await loadDefaults();
         setupCollectionTabs();
         refreshAdminView();
         document.getElementById('jobForm').addEventListener('submit', onSaveJob);
+        document.getElementById('adminLoginForm')?.addEventListener('submit', onAdminLogin);
+        setAuthenticatedUI(false);
     } catch (error) {
         console.error('Admin startup failed', error);
         showMessage('Failed to initialize admin panel.', true);
