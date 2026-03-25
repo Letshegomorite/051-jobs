@@ -5,7 +5,7 @@ const STORAGE_KEYS = {
 };
 
 const ADMIN_CREDENTIALS = {
-    email: 'admin@BPG.com',
+    username: 'admin',
     password: '59862010'
 };
 
@@ -29,7 +29,7 @@ function showMessage(text, isError = false) {
     const el = document.getElementById('adminMessage');
     if (!el) return;
     el.textContent = text;
-    el.className = `mt-4 text-sm ${isError ? 'text-red-600' : 'text-slate-600'}`;
+    el.className = `mt-4 text-sm ${isError ? 'text-red-400' : 'text-slate-300'}`;
 }
 
 function persist() {
@@ -38,9 +38,9 @@ function persist() {
     localStorage.setItem(STORAGE_KEYS.courses, JSON.stringify(state.courses));
 }
 
-function nextJobId() {
-    const maxId = state.jobs.reduce((max, job) => {
-        const asNumber = Number(job?.id);
+function nextIdFor(collection) {
+    const maxId = safeArray(collection).reduce((max, item) => {
+        const asNumber = Number(item?.id);
         return Number.isFinite(asNumber) ? Math.max(max, asNumber) : max;
     }, 0);
     return maxId + 1;
@@ -115,9 +115,9 @@ function renderStats() {
     ];
 
     target.innerHTML = cards.map(card => `
-        <div class="glass border border-white/50 rounded-2xl p-5 soft-shadow">
-            <p class="text-sm text-slate-500 flex items-center gap-2"><i class="fa-solid ${card.icon}"></i>${card.label}</p>
-            <p class="text-3xl mt-2 font-semibold ${card.danger ? 'text-red-600' : 'text-slate-900'}">${card.value}</p>
+        <div class="site-card p-5">
+            <p class="text-sm text-slate-400 flex items-center gap-2"><i class="fa-solid ${card.icon}"></i>${card.label}</p>
+            <p class="text-3xl mt-2 font-semibold ${card.danger ? 'text-red-400' : 'text-slate-100'}">${card.value}</p>
         </div>
     `).join('');
 }
@@ -128,17 +128,17 @@ function renderExpiredJobs() {
 
     const expiredJobs = state.jobs.filter(job => isExpiredClosingDate(job?.closingDate));
     if (!expiredJobs.length) {
-        target.innerHTML = '<p class="text-sm text-slate-500 bg-white/80 border border-white rounded-xl p-4">No expired jobs. Great, your listings are fresh.</p>';
+        target.innerHTML = '<p class="text-sm text-slate-400">No expired jobs. Great, your listings are fresh.</p>';
         return;
     }
 
     target.innerHTML = expiredJobs.map(job => `
-        <div class="bg-white border rounded-2xl p-4 flex items-center justify-between gap-4">
+        <div class="bg-slate-950 border border-slate-700 rounded-2xl p-4 flex items-center justify-between gap-4">
             <div>
-                <p class="font-semibold text-slate-900">${safeText(job?.title, 'Untitled job')}</p>
-                <p class="text-xs text-slate-500 mt-1">${safeText(job?.company, 'Unknown company')} • Closed ${formatDate(job?.closingDate)}</p>
+                <p class="font-semibold text-slate-100">${safeText(job?.title, 'Untitled job')}</p>
+                <p class="text-xs text-slate-400 mt-1">${safeText(job?.company, 'Unknown company')} • Closed ${formatDate(job?.closingDate)}</p>
             </div>
-            <button class="text-sm text-red-600 border border-red-200 px-3 py-2 rounded-xl" onclick="deleteJob('${String(job?.id).replace(/'/g, "\\'")}')">Delete</button>
+            <button class="text-sm text-red-400 border border-red-400/40 px-3 py-2 rounded-xl" onclick="deleteJob('${String(job?.id).replace(/'/g, "\\'")}')">Delete</button>
         </div>
     `).join('');
 }
@@ -147,7 +147,7 @@ function renderCollectionTabs() {
     const tabs = document.querySelectorAll('.collection-tab');
     tabs.forEach(tab => {
         const isActive = tab.dataset.collection === state.activeCollection;
-        tab.className = `collection-tab border px-4 py-2 rounded-xl text-sm ${isActive ? 'bg-[#00d4ff] text-white border-[#00d4ff]' : 'bg-white text-slate-700'}`;
+        tab.className = `collection-tab border px-4 py-2 rounded-xl text-sm ${isActive ? 'bg-blue-700 text-white border-blue-700' : 'bg-slate-900 text-slate-200 border-slate-700'}`;
     });
 }
 
@@ -163,18 +163,18 @@ function renderContentTable() {
         const isExpiredJob = collectionName === 'jobs' && isExpiredClosingDate(item?.closingDate);
         const closingValue = safeText(item?.[meta.closingKey]);
         return `
-            <tr class="border-b align-top ${isExpiredJob ? 'bg-red-50/70' : ''}">
+            <tr class="border-b border-slate-800 align-top ${isExpiredJob ? 'bg-red-950/20' : ''}">
                 <td class="py-2 pr-3">${safeText(item?.title)}</td>
                 <td class="py-2 pr-3">${safeText(item?.[meta.orgKey], '—')}</td>
                 <td class="py-2 pr-3">${safeText(item?.[meta.typeKey], '—')}</td>
-                <td class="py-2 pr-3 ${isExpiredJob ? 'text-red-600 font-medium' : ''}">${collectionName === 'jobs' ? formatDate(closingValue) : safeText(closingValue, '—')}</td>
+                <td class="py-2 pr-3 ${isExpiredJob ? 'text-red-300 font-medium' : ''}">${collectionName === 'jobs' ? formatDate(closingValue) : safeText(closingValue, '—')}</td>
                 <td class="py-2 whitespace-nowrap">
-                    ${collectionName === 'jobs' ? `<button class="text-[#00d4ff] mr-3" onclick="editJob('${String(item?.id).replace(/'/g, "\\'")}')">Edit</button>` : ''}
-                    <button class="text-red-600" onclick="deleteCollectionItem('${collectionName}','${String(item?.id).replace(/'/g, "\\'")}')">Delete</button>
+                    ${collectionName === 'jobs' ? `<button class="text-blue-300 mr-3" onclick="editJob('${String(item?.id).replace(/'/g, "\\'")}')">Edit</button>` : ''}
+                    <button class="text-red-400" onclick="deleteCollectionItem('${collectionName}','${String(item?.id).replace(/'/g, "\\'")}')">Delete</button>
                 </td>
             </tr>
         `;
-    }).join('') || '<tr><td colspan="5" class="py-4 text-slate-500">No listings found for this section.</td></tr>';
+    }).join('') || '<tr><td colspan="5" class="py-4 text-slate-400">No listings found for this section.</td></tr>';
 }
 
 function refreshAdminView() {
@@ -185,8 +185,9 @@ function refreshAdminView() {
 }
 
 function resetJobForm() {
-    document.getElementById('jobForm').reset();
-    document.getElementById('jobId').value = '';
+    document.getElementById('jobForm')?.reset();
+    const idField = document.getElementById('jobId');
+    if (idField) idField.value = '';
 }
 
 function editJob(id) {
@@ -248,7 +249,7 @@ function collectJobFormData() {
         .filter(Boolean);
 
     return {
-        id: document.getElementById('jobId').value || nextJobId(),
+        id: document.getElementById('jobId').value || nextIdFor(state.jobs),
         title: document.getElementById('jobTitle').value.trim(),
         company: document.getElementById('jobCompany').value.trim(),
         location: document.getElementById('jobLocation').value.trim(),
@@ -266,7 +267,7 @@ function onSaveJob(event) {
 
     const payload = collectJobFormData();
     if (!payload.title || !payload.company) {
-        showMessage('Title and company are required.', true);
+        showMessage('Job title and company are required.', true);
         return;
     }
 
@@ -282,6 +283,58 @@ function onSaveJob(event) {
     persist();
     refreshAdminView();
     resetJobForm();
+}
+
+function onSaveBursary(event) {
+    event.preventDefault();
+    const title = document.getElementById('bursaryTitle').value.trim();
+    const provider = document.getElementById('bursaryProvider').value.trim();
+
+    if (!title || !provider) {
+        showMessage('Bursary title and provider are required.', true);
+        return;
+    }
+
+    state.bursaries.unshift({
+        id: nextIdFor(state.bursaries),
+        title,
+        provider,
+        level: document.getElementById('bursaryLevel').value.trim(),
+        deadline: document.getElementById('bursaryDeadline').value.trim(),
+        link: document.getElementById('bursaryLink').value.trim(),
+        description: document.getElementById('bursaryDescription').value.trim()
+    });
+
+    persist();
+    refreshAdminView();
+    document.getElementById('bursaryForm').reset();
+    showMessage('Bursary added successfully.');
+}
+
+function onSaveCourse(event) {
+    event.preventDefault();
+    const title = document.getElementById('courseTitle').value.trim();
+    const institution = document.getElementById('courseInstitution').value.trim();
+
+    if (!title || !institution) {
+        showMessage('Course title and institution are required.', true);
+        return;
+    }
+
+    state.courses.unshift({
+        id: nextIdFor(state.courses),
+        title,
+        institution,
+        mode: document.getElementById('courseMode').value.trim(),
+        duration: document.getElementById('courseDuration').value.trim(),
+        link: document.getElementById('courseLink').value.trim(),
+        description: document.getElementById('courseDescription').value.trim()
+    });
+
+    persist();
+    refreshAdminView();
+    document.getElementById('courseForm').reset();
+    showMessage('Course added successfully.');
 }
 
 function importJson() {
@@ -371,28 +424,41 @@ function setupCollectionTabs() {
     });
 }
 
+function setAuthenticatedUI(isAuthenticated) {
+    const content = document.getElementById('adminContent');
+    const panel = document.getElementById('adminLoginPanel');
+    if (content) content.classList.toggle('hidden', !isAuthenticated);
+    if (panel) panel.classList.toggle('hidden', isAuthenticated);
+}
+
+function onAdminLogin(event) {
+    event.preventDefault();
+    const username = document.getElementById('adminUsername')?.value?.trim();
+    const password = document.getElementById('adminPassword')?.value;
+    const loginMessage = document.getElementById('adminLoginMessage');
+
+    if (username !== ADMIN_CREDENTIALS.username || password !== ADMIN_CREDENTIALS.password) {
+        if (loginMessage) loginMessage.classList.remove('hidden');
+        return;
+    }
+
+    if (loginMessage) loginMessage.classList.add('hidden');
+    setAuthenticatedUI(true);
+    showMessage('Signed in successfully.');
+}
+
 async function startAdmin() {
     try {
-        const email = window.prompt('Admin Email');
-        const password = window.prompt('Admin Password');
-
-        if (email !== ADMIN_CREDENTIALS.email || password !== ADMIN_CREDENTIALS.password) {
-            document.body.innerHTML = `
-                <main class="min-h-screen flex items-center justify-center px-6">
-                    <div class="bg-white border rounded-3xl p-8 text-center max-w-lg w-full">
-                        <h1 class="text-3xl font-semibold mb-3">Access Denied</h1>
-                        <p class="text-slate-600 mb-5">The email or password provided is incorrect.</p>
-                        <a href="index.html" class="inline-block bg-[#00d4ff] text-white px-5 py-3 rounded-2xl">Go Home</a>
-                    </div>
-                </main>
-            `;
-            return;
-        }
-
         await loadDefaults();
         setupCollectionTabs();
         refreshAdminView();
-        document.getElementById('jobForm').addEventListener('submit', onSaveJob);
+
+        document.getElementById('jobForm')?.addEventListener('submit', onSaveJob);
+        document.getElementById('bursaryForm')?.addEventListener('submit', onSaveBursary);
+        document.getElementById('courseForm')?.addEventListener('submit', onSaveCourse);
+        document.getElementById('adminLoginForm')?.addEventListener('submit', onAdminLogin);
+
+        setAuthenticatedUI(false);
     } catch (error) {
         console.error('Admin startup failed', error);
         showMessage('Failed to initialize admin panel.', true);

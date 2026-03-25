@@ -1,1 +1,39 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Contact 051 Jobs for corrections, partnerships or listing questions."><title>Contact Us | 051 Jobs</title><script src="https://cdn.tailwindcss.com"></script><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500&display=swap');.tail-container *{font-family:'Inter',system_ui,sans-serif}</style></head><body class="tail-container bg-gray-50"><main class="max-w-xl mx-auto px-6 py-16"><h1 class="text-4xl font-semibold mb-4">Contact Us</h1><p class="text-gray-700 mb-6">Email us directly at <a class="text-[#00d4ff]" href="mailto:editorial@051jobs.co.za">editorial@051jobs.co.za</a> or use the form below. We respond to factual correction requests and listing concerns.</p><form id="contactForm" class="space-y-4 bg-white border rounded-2xl p-6"><input type="text" required placeholder="Your name" class="w-full border rounded-xl p-3"><input type="email" required placeholder="Email address" class="w-full border rounded-xl p-3"><textarea required rows="5" placeholder="How can we help?" class="w-full border rounded-xl p-3"></textarea><button class="bg-[#00d4ff] text-white px-5 py-3 rounded-xl" type="submit">Send Message</button><p id="contactMessage" class="text-green-700 text-sm hidden">Thanks, your message has been received. We will respond by email.</p></form><p class="mt-6"><a href="index.html" class="text-[#00d4ff]">← Back to Home</a></p></main><script>document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('contactMessage').classList.remove('hidden');this.reset();});</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="Contact 051 Jobs for corrections, partnerships or listing questions.">
+    <title>Contact Us | 051 Jobs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500&display=swap');
+        .tail-container * { font-family: 'Inter', system_ui, sans-serif; }
+    </style>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body class="tail-container bg-slate-950 text-slate-100">
+    <main class="max-w-xl mx-auto px-6 py-16">
+        <section class="rounded-3xl border border-slate-800 bg-slate-900/70 p-8">
+            <h1 class="text-4xl font-semibold mb-4">Contact Us</h1>
+            <p class="text-slate-300 mb-6">Use the form below for factual corrections, partnerships, or listing concerns. Direct personal email addresses and phone numbers are not displayed on this site.</p>
+            <form id="contactForm" class="space-y-4">
+                <input type="text" required placeholder="Your name" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3">
+                <input type="email" required placeholder="Email address" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3">
+                <textarea required rows="5" placeholder="How can we help?" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3"></textarea>
+                <button class="bg-blue-700 hover:bg-blue-600 text-white px-5 py-3 rounded-xl" type="submit">Send Message</button>
+                <p id="contactMessage" class="text-green-400 text-sm hidden">Thanks, your message has been received. We will respond via the email you provided.</p>
+            </form>
+            <p class="mt-6"><a href="index.html" class="text-blue-300 hover:text-blue-200">← Back to Home</a></p>
+        </section>
+    </main>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('contactMessage').classList.remove('hidden');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

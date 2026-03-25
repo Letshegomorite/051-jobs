@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  --bg: #020617;
+  --panel: #0f172a;
+  --panel2: #111827;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --brand: #2563eb;
+  --border: #1e293b;
+}
+
+body.site-theme, body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: radial-gradient(circle at 20% 0%, rgba(37, 99, 235, 0.20), transparent 40%), var(--bg);
+  color: var(--text);
+}
+
+.site-nav { background: rgba(2, 6, 23, 0.88); backdrop-filter: blur(8px); border-color: var(--border); }
+.site-nav a { color: var(--text); }
+.site-nav a:hover { color: #93c5fd; }
+.site-card { background: linear-gradient(180deg, rgba(15,23,42,.96), rgba(15,23,42,.9)); border: 1px solid var(--border); border-radius: 1.5rem; }
+.hero-panel { background: linear-gradient(120deg, #0b1730, #1d4ed8 50%, #0b1730); border: 1px solid #1d4ed8; }
+.site-btn { background: var(--brand); color: #fff; border-radius: .75rem; padding: .65rem 1rem; }
+.site-btn:hover { background: #1d4ed8; }
+
+footer { background: #020617 !important; border-top: 1px solid var(--border); }
+input, textarea, select { background: #020617 !important; border-color: #334155 !important; color: var(--text) !important; }
+.text-gray-900, .text-gray-700, .text-gray-600 { color: var(--text) !important; }
+.bg-white { background: var(--panel) !important; }
