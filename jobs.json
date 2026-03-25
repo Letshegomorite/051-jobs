@@ -3,110 +3,240 @@
     "id": 1,
     "title": "Senior Software Engineer",
     "company": "Vanguard Tech",
-    "location": "Johannesburg, Gauteng",
+    "location": "Johannesburg, Gauteng, South Africa",
     "type": "Full-time",
-    "salary": "R55,000 – R75,000",
-    "description": "Vanguard Tech is looking for a Senior Software Engineer to build scalable web apps used by millions across Africa.",
-    "requirements": ["5+ years full-stack","React / Next.js expert","TypeScript","AWS experience"],
+    "salary": "R55,000 – R75,000 per month",
+    "salaryInsight": "Mid-to-senior software engineering roles in Gauteng often range from R50,000 to R85,000 monthly depending on cloud and leadership exposure.",
+    "description": "Vanguard Tech is hiring a Senior Software Engineer to design and maintain secure web products used by banks, insurers and public-sector clients in South Africa. You will guide architecture decisions, mentor junior developers, and improve deployment reliability across multiple production environments. The role combines hands-on coding, code reviews, collaboration with product managers, and DevOps ownership. This is suitable for professionals who enjoy solving scale, performance and security challenges while building software with measurable social and economic impact.",
+    "requirements": [
+      "South African work eligibility",
+      "5+ years in full-stack or backend engineering",
+      "Strong JavaScript/TypeScript and modern frameworks",
+      "Experience with cloud hosting, CI/CD and automated testing",
+      "Ability to mentor junior developers and communicate with non-technical stakeholders"
+    ],
+    "applicationProcess": "Prepare an updated CV, a short project portfolio link, and two professional references. Submit through the official careers page. Shortlisted candidates complete a technical assessment, followed by a panel interview and final culture-fit discussion.",
+    "tips": [
+      "Tailor your CV to highlight measurable project outcomes (performance, uptime, cost savings).",
+      "Show evidence of system design thinking, not only coding tasks.",
+      "Include links to GitHub, technical writing, or production projects where possible."
+    ],
     "link": "https://vanguardtech.co.za/careers"
   },
   {
     "id": 2,
     "title": "Digital Marketing Specialist",
-    "company": "BrandBoost Agency",
-    "location": "Cape Town, Western Cape",
+    "company": "Wave Media Group",
+    "location": "Cape Town, Western Cape, South Africa",
     "type": "Full-time",
-    "salary": "R32,000 – R48,000",
-    "description": "Lead SEO, Google Ads and social campaigns for premium clients.",
-    "requirements": ["3+ years digital marketing","Google Ads & Meta","Analytics skills"],
-    "link": "https://brandboost.co.za/apply"
+    "salary": "R28,000 – R42,000 per month",
+    "salaryInsight": "Digital marketing specialists in Cape Town commonly earn between R24,000 and R45,000 monthly based on channel ownership and analytics depth.",
+    "description": "Wave Media Group seeks a Digital Marketing Specialist to run SEO, paid media and content growth campaigns for retail and education clients. You will coordinate campaign calendars, optimize landing pages, and report ROI across Google Ads and social channels. The role requires strong analytical ability, copy direction and collaboration with designers and developers. Candidates with experience in local South African audiences and multilingual campaign adaptation will be highly competitive.",
+    "requirements": [
+      "South African work eligibility",
+      "3+ years in digital marketing or performance marketing",
+      "Hands-on experience with Google Ads and Meta Ads Manager",
+      "Working knowledge of SEO and conversion optimization",
+      "Comfort using analytics tools and dashboard reporting"
+    ],
+    "applicationProcess": "Complete the online application with CV and campaign case studies. Include one campaign where you improved conversion rate or lowered CPA. Shortlisted applicants complete a practical assignment and a final interview with the growth lead.",
+    "tips": [
+      "Include budget size, CTR, CPC and conversion improvements in your CV bullets.",
+      "Share before-and-after examples of landing page optimization.",
+      "Demonstrate understanding of compliance for financial or education advertising."
+    ],
+    "link": "https://wavemedia.co.za/jobs"
   },
   {
     "id": 3,
     "title": "Financial Analyst",
-    "company": "FinSecure Solutions",
-    "location": "Pretoria, Gauteng",
+    "company": "Ubuntu Capital Partners",
+    "location": "Sandton, Gauteng, South Africa",
     "type": "Full-time",
-    "salary": "R42,000 – R58,000",
-    "description": "Analyse financials, build models and support executive decisions.",
-    "requirements": ["3+ years finance","Advanced Excel","Power BI"],
-    "link": "https://finsecure.co.za/vacancies"
+    "salary": "R35,000 – R52,000 per month",
+    "salaryInsight": "Financial analyst roles in Sandton typically sit between R30,000 and R60,000 monthly depending on modelling skills and sector specialization.",
+    "description": "Ubuntu Capital Partners is recruiting a Financial Analyst to support valuation, budgeting and forecasting work for corporate advisory projects. The analyst will build financial models, prepare board-ready reports and assist investment committees with scenario analysis. This opportunity suits detail-oriented graduates and early-career professionals who want strong exposure to South African corporate finance and deal environments.",
+    "requirements": [
+      "South African citizen or valid work authorization",
+      "BCom Finance, Accounting or Economics",
+      "2+ years in FP&A, audit, banking or corporate finance",
+      "Advanced Excel and financial modelling capability",
+      "Strong written communication for executive summaries"
+    ],
+    "applicationProcess": "Submit CV, academic transcripts and a short motivation letter via the company portal. Candidates may be asked to complete a timed modelling exercise before interviews. Final selection includes reference checks and offer discussion.",
+    "tips": [
+      "Show technical skills clearly: DCF, sensitivity analysis, budgeting and forecasting.",
+      "Mention industries you have analysed (banking, mining, telecoms, etc.).",
+      "Keep CV formatting clean and quantify impact in each role."
+    ],
+    "link": "https://ubuntucapital.co.za/careers"
   },
   {
     "id": 4,
     "title": "UX/UI Designer",
-    "company": "CreativLabs",
-    "location": "Durban, KwaZulu-Natal",
+    "company": "Pixel Forge Studio",
+    "location": "Durban, KwaZulu-Natal, South Africa",
     "type": "Contract",
-    "salary": "R38,000",
-    "description": "6-month contract designing mobile and web interfaces in Figma.",
-    "requirements": ["3+ years UX/UI","Figma mastery","Portfolio required"],
-    "link": "https://creativlabs.co.za/careers"
+    "salary": "R30,000 – R45,000 per month",
+    "salaryInsight": "Contract UX/UI design rates vary, but experienced product designers in South Africa often earn equivalent monthly income between R28,000 and R55,000.",
+    "description": "Pixel Forge Studio needs a UX/UI Designer for a 12-month contract focused on redesigning web and mobile products for logistics and healthcare clients. You will conduct user research, design flows and prototypes, and collaborate closely with engineers to ship consistent interfaces. The team values accessibility-first design and practical design systems that reduce development rework.",
+    "requirements": [
+      "Portfolio with live product work",
+      "3+ years UX/UI experience",
+      "Proficiency in Figma and prototyping workflows",
+      "Experience with usability testing and accessibility standards",
+      "Ability to work with cross-functional teams and deadlines"
+    ],
+    "applicationProcess": "Apply with CV and portfolio link. Clearly label your role in each project. Shortlisted candidates complete a paid design exercise and present a short walkthrough to the hiring panel.",
+    "tips": [
+      "Include the business problem, design approach and final impact in your portfolio case studies.",
+      "Show evidence of handoff quality (tokens, components, specs).",
+      "Demonstrate accessibility knowledge with practical examples."
+    ],
+    "link": "https://pixelforge.co.za/apply"
   },
   {
     "id": 5,
     "title": "Customer Success Executive",
-    "company": "TeleLink SA",
-    "location": "Bloemfontein, Free State",
+    "company": "CloudBase CRM",
+    "location": "Pretoria, Gauteng, South Africa",
     "type": "Full-time",
-    "salary": "R28,000 – R36,000",
-    "description": "Onboard clients and ensure they get maximum value from our telecom solutions.",
-    "requirements": ["2+ years success","CRM experience"],
-    "link": "https://telelink.co.za/jobs"
+    "salary": "R22,000 – R33,000 per month",
+    "salaryInsight": "Customer success roles in SaaS businesses in South Africa generally range from R20,000 to R38,000 monthly based on account size and retention KPIs.",
+    "description": "CloudBase CRM is looking for a Customer Success Executive to onboard new clients, improve product adoption and reduce churn in the SME segment. The role combines client training, account health monitoring and escalation management. You will work with support and product teams to resolve recurring issues and improve customer outcomes.",
+    "requirements": [
+      "South African work eligibility",
+      "2+ years in customer success, account management or support",
+      "Strong communication and stakeholder management skills",
+      "Experience with CRM tools and reporting dashboards",
+      "Comfort with targets such as retention, expansion and NPS"
+    ],
+    "applicationProcess": "Send your CV and a short note describing your customer retention achievements. Shortlisted candidates attend a role-play interview based on a client onboarding scenario, followed by a team interview.",
+    "tips": [
+      "Highlight measurable retention or upsell outcomes in previous roles.",
+      "Use examples of difficult customer situations you resolved professionally.",
+      "Demonstrate product knowledge learning speed and empathy."
+    ],
+    "link": "https://cloudbasecrm.co.za/careers"
   },
   {
     "id": 6,
     "title": "Data Scientist",
-    "company": "AI Innovate",
-    "location": "Remote",
+    "company": "Mzanzi Insights Lab",
+    "location": "Cape Town, Western Cape, South Africa",
     "type": "Full-time",
-    "salary": "R65,000 – R90,000",
-    "description": "Build ML models that power banking and retail AI products.",
-    "requirements": ["4+ years data science","Python & TensorFlow"],
-    "link": "https://aiinnovate.co.za/careers"
+    "salary": "R48,000 – R70,000 per month",
+    "salaryInsight": "Data scientist salaries in major South African metros often range from R45,000 to R90,000 monthly depending on Python, ML and deployment experience.",
+    "description": "Mzanzi Insights Lab is hiring a Data Scientist to build forecasting and classification models for retail and public services datasets. You will clean and model large datasets, validate model performance and communicate insights to non-technical decision-makers. The role includes experimentation, dashboard collaboration and production model monitoring.",
+    "requirements": [
+      "Degree in Statistics, Mathematics, Computer Science or related field",
+      "3+ years in analytics or data science roles",
+      "Strong Python, SQL and statistical modelling knowledge",
+      "Experience with model validation and bias checks",
+      "Ability to explain insights clearly to business users"
+    ],
+    "applicationProcess": "Apply online with CV, portfolio/notebook links and a brief motivation. Candidates complete a take-home technical task and present findings in a final interview round.",
+    "tips": [
+      "Include projects that moved beyond exploration into deployment or business decisions.",
+      "Show how you handled data quality issues and stakeholder expectations.",
+      "Document tools used, metrics improved and decision impact."
+    ],
+    "link": "https://mzanziinsightslab.co.za/jobs"
   },
   {
     "id": 7,
     "title": "Enterprise Sales Manager",
-    "company": "RetailGiant",
-    "location": "Johannesburg, Gauteng",
+    "company": "Nexus Telecom SA",
+    "location": "Johannesburg, Gauteng, South Africa",
     "type": "Full-time",
-    "salary": "R50,000 + commission",
-    "description": "Hunt new enterprise clients and close multi-million rand deals.",
-    "requirements": ["5+ years enterprise sales","Salesforce"],
-    "link": "https://retailgiant.co.za/apply"
+    "salary": "R45,000 base + commission",
+    "salaryInsight": "Enterprise sales managers in telecom and SaaS often combine a base of R40,000–R70,000 with variable commission tied to quota achievement.",
+    "description": "Nexus Telecom SA requires an Enterprise Sales Manager to grow B2B accounts across Gauteng and KwaZulu-Natal. You will lead consultative sales cycles, negotiate enterprise contracts and coordinate implementation handovers. This role is ideal for candidates with strong pipeline discipline and experience closing multi-stakeholder deals.",
+    "requirements": [
+      "5+ years B2B sales experience with enterprise clients",
+      "Proven track record of meeting or exceeding quota",
+      "Excellent negotiation and proposal-writing skills",
+      "Understanding of telecom or cloud solutions preferred",
+      "Valid South African driver’s licence and willingness to travel"
+    ],
+    "applicationProcess": "Submit CV and a brief sales achievement summary through the careers portal. Qualified applicants complete a panel interview and present a sample account plan for a target client segment.",
+    "tips": [
+      "Quantify revenue closed, average deal size and renewal outcomes.",
+      "Show your methodology for pipeline management and forecasting accuracy.",
+      "Demonstrate collaboration with delivery and customer success teams."
+    ],
+    "link": "https://nexustelecom.co.za/careers"
   },
   {
     "id": 8,
     "title": "HR Business Partner",
-    "company": "PeopleFirst Group",
-    "location": "Cape Town, Western Cape",
+    "company": "Imbokodo Manufacturing",
+    "location": "East London, Eastern Cape, South Africa",
     "type": "Full-time",
-    "salary": "R45,000 – R60,000",
-    "description": "Strategic HR role supporting business leaders.",
-    "requirements": ["5+ years HRBP","Labour law knowledge"],
-    "link": "https://peoplefirst.co.za/vacancies"
+    "salary": "R38,000 – R56,000 per month",
+    "salaryInsight": "HR business partner compensation in manufacturing sectors typically ranges between R35,000 and R60,000 monthly based on union and compliance exposure.",
+    "description": "Imbokodo Manufacturing is searching for an HR Business Partner to support workforce planning, labour relations and performance management at plant level. The role involves policy implementation, employee relations case handling and coaching line managers on fair people practices. Experience in labour law compliance and high-volume operations is valuable.",
+    "requirements": [
+      "Relevant HR qualification",
+      "4+ years HR generalist or HRBP experience",
+      "Knowledge of South African labour legislation and CCMA processes",
+      "Strong conflict resolution and facilitation skills",
+      "Experience in industrial or manufacturing settings preferred"
+    ],
+    "applicationProcess": "Upload CV and qualifications to the official hiring portal. The process includes HR screening, panel interviews and reference verification. Final candidates may complete a scenario-based assessment on labour relations.",
+    "tips": [
+      "Emphasize labour law and disciplinary process experience clearly.",
+      "Provide examples where HR interventions improved retention or absenteeism.",
+      "Show your ability to partner with operations teams, not only HR teams."
+    ],
+    "link": "https://imbokodomanufacturing.co.za/careers"
   },
   {
     "id": 9,
     "title": "Junior Content Creator",
-    "company": "MediaWave",
-    "location": "Johannesburg, Gauteng",
-    "type": "Internship",
-    "salary": "R8,000 stipend",
-    "description": "Create short-form video content for TikTok and Instagram.",
-    "requirements": ["Portfolio of social content","CapCut skills"],
-    "link": "https://mediawave.co.za/internships"
+    "company": "Rise Digital Africa",
+    "location": "Bloemfontein, Free State, South Africa",
+    "type": "Full-time",
+    "salary": "R15,000 – R24,000 per month",
+    "salaryInsight": "Entry-level content creator roles commonly range from R12,000 to R25,000 monthly depending on editing, scripting and platform performance results.",
+    "description": "Rise Digital Africa is hiring a Junior Content Creator to support social campaigns, video scripts and blog production for youth-focused brands. You will research trends, draft content calendars and work with designers to deliver platform-ready assets. This role suits applicants with strong writing skills and willingness to learn analytics-driven content strategy.",
+    "requirements": [
+      "Portfolio of writing, social posts or short-form video work",
+      "1+ year internship, freelance or junior content experience",
+      "Basic design/video editing familiarity",
+      "Strong grammar and storytelling ability",
+      "Understanding of platform trends and audience behavior"
+    ],
+    "applicationProcess": "Apply with CV, portfolio links and a short motivation explaining your content interests. Selected applicants complete a practical test involving content planning for one week across multiple platforms.",
+    "tips": [
+      "Share links to your best performing content and explain why it worked.",
+      "Demonstrate reliability with deadlines and collaborative feedback.",
+      "Use ATS-friendly CV keywords: copywriting, social media, SEO, analytics."
+    ],
+    "link": "https://risedigital.africa/careers"
   },
   {
     "id": 10,
     "title": "IT Support Technician",
-    "company": "NetGuard Systems",
-    "location": "Durban, KwaZulu-Natal",
+    "company": "AfriNet Systems",
+    "location": "Polokwane, Limpopo, South Africa",
     "type": "Full-time",
-    "salary": "R22,000 – R30,000",
-    "description": "First-line technical support for 150+ staff members.",
-    "requirements": ["2+ years IT support","CompTIA A+"],
-    "link": "https://netguard.co.za/careers"
+    "salary": "R18,000 – R29,000 per month",
+    "salaryInsight": "IT support technician salaries in regional South African markets often range from R16,000 to R30,000 monthly depending on certifications and shift coverage.",
+    "description": "AfriNet Systems is recruiting an IT Support Technician to provide first- and second-line support for desktops, networks and cloud tools across branch offices. Duties include troubleshooting, user onboarding, hardware setup and ticket resolution within SLA. Candidates with strong customer service and practical networking skills are encouraged to apply.",
+    "requirements": [
+      "NQF-aligned IT certificate, diploma or equivalent practical experience",
+      "1–3 years helpdesk or desktop support experience",
+      "Familiarity with Windows, Microsoft 365 and basic networking",
+      "Ability to diagnose and document incidents clearly",
+      "Valid driver’s licence is advantageous"
+    ],
+    "applicationProcess": "Submit CV and certifications through the careers page. Shortlisted candidates complete a practical troubleshooting assessment and attend an interview with IT operations leads.",
+    "tips": [
+      "List ticketing systems and SLA metrics you have worked with.",
+      "Mention certifications such as CompTIA A+, N+, or Microsoft fundamentals.",
+      "Prepare examples of difficult issues you solved end-to-end."
+    ],
+    "link": "https://afrinetsystems.co.za/jobs"
   }
 ]

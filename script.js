@@ -1,4 +1,4 @@
-/* 051 Jobs – Stabilized Production Version */
+/* 051 Jobs – AdSense Readiness Version */
 
 let JOBS = [];
 let BURSARIES = [];
@@ -94,7 +94,7 @@ function createCard(item, type) {
     const title = safeText(item?.title, 'Untitled listing');
     const value = safeText(item?.salary || item?.amount || item?.fee);
     const description = safeText(item?.description, 'No description available.');
-    const safeDescription = description.length > 120 ? `${description.slice(0, 120)}...` : description;
+    const safeDescription = description.length > 160 ? `${description.slice(0, 160)}...` : description;
 
     return `
     <a href="${type}.html?id=${id}" class="card-hover bg-white border rounded-3xl overflow-hidden flex flex-col h-full">
@@ -131,6 +131,12 @@ function setText(id, text) {
 function performGlobalSearch() {
     const query = document.getElementById('globalSearchInput')?.value?.trim() || '';
     if (query) window.location.href = `jobs.html?search=${encodeURIComponent(query)}`;
+}
+
+function setMeta(title, description) {
+    if (title) document.title = title;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta && description) meta.setAttribute('content', description);
 }
 
 const PAGE_SIZE = 9;
@@ -212,7 +218,7 @@ function filterAndRenderJobs() {
     const { pageItems, totalPages, page } = paginate(filtered, jobFilters.page);
     jobFilters.page = page;
 
-    setHtml('jobGrid', pageItems.map(j => createCard(j, 'job')).join('') || '<p class="text-gray-500">No jobs found.</p>');
+    setHtml('jobGrid', pageItems.map(j => createCard(j, 'job')).join('') || '<p class="text-gray-600 bg-white border rounded-3xl p-6">No jobs found. Try another keyword or clear your filters.</p>');
     setText('jobCount', `${filtered.length} jobs found`);
     renderPager('jobPagination', jobFilters.page, totalPages, 'goToJobPage');
     renderJobFilterOptions();
@@ -276,7 +282,7 @@ function filterAndRenderBursaries() {
     const { pageItems, totalPages, page } = paginate(filtered, bursaryFilters.page);
     bursaryFilters.page = page;
 
-    setHtml('bursaryGrid', pageItems.map(b => createCard(b, 'bursary')).join('') || '<p class="text-gray-500">No bursaries found.</p>');
+    setHtml('bursaryGrid', pageItems.map(b => createCard(b, 'bursary')).join('') || '<p class="text-gray-600 bg-white border rounded-3xl p-6">No bursaries found. Try broader search terms.</p>');
     setText('bursaryCount', `${filtered.length} bursaries found`);
     renderPager('bursaryPagination', bursaryFilters.page, totalPages, 'goToBursaryPage');
     renderCheckboxFilters('bursaryLevelFilters', uniqueValues(BURSARIES, 'level'), bursaryFilters.levels, 'toggleBursaryLevelFilter');
@@ -322,7 +328,7 @@ function filterAndRenderCourses() {
     const { pageItems, totalPages, page } = paginate(filtered, courseFilters.page);
     courseFilters.page = page;
 
-    setHtml('courseGrid', pageItems.map(c => createCard(c, 'course')).join('') || '<p class="text-gray-500">No courses found.</p>');
+    setHtml('courseGrid', pageItems.map(c => createCard(c, 'course')).join('') || '<p class="text-gray-600 bg-white border rounded-3xl p-6">No courses found. Adjust your search criteria and try again.</p>');
     setText('courseCount', `${filtered.length} courses found`);
     renderPager('coursePagination', courseFilters.page, totalPages, 'goToCoursePage');
     renderCheckboxFilters('courseModeFilters', uniqueValues(COURSES, 'mode'), courseFilters.modes, 'toggleCourseModeFilter');
@@ -360,6 +366,18 @@ function formatRequirements(req) {
     return list.map(item => `<li>${safeText(item)}</li>`).join('');
 }
 
+function formatTips(tips) {
+    const list = safeArray(tips);
+    if (!list.length) return '<li>Read all instructions carefully and apply before deadlines.</li>';
+    return list.map(item => `<li>${safeText(item)}</li>`).join('');
+}
+
+function renderRelatedItems(type, currentId) {
+    const source = type === 'job' ? JOBS : type === 'bursary' ? BURSARIES : COURSES;
+    const related = source.filter(entry => normalizeId(entry?.id) !== normalizeId(currentId)).slice(0, 3);
+    return related.map(item => createCard(item, type)).join('');
+}
+
 function renderDetail(targetId, item, type) {
     const target = document.getElementById(targetId);
     if (!target) return;
@@ -379,38 +397,70 @@ function renderDetail(targetId, item, type) {
     const money = safeText(item.salary || item.amount || item.fee);
     const deadlineOrDuration = safeText(item.deadline || item.duration || 'Not specified');
     const link = safeText(item.link, FALLBACK_APPLY_LINK) || FALLBACK_APPLY_LINK;
+    const guideLink = type === 'job' ? 'how-to-write-a-cv-south-africa.html' : type === 'bursary' ? 'top-bursaries-2026.html' : 'highest-paying-jobs-south-africa.html';
+
+    setMeta(
+        `${safeText(item.title)} | 051 Jobs`,
+        `${safeText(item.title)} in ${safeText(item.location, 'South Africa')}. Requirements, salary insights, application process and practical applicant tips.`
+    );
 
     target.innerHTML = `
-        <div class="bg-white border rounded-3xl p-8">
-            <div class="flex items-start justify-between gap-4 flex-wrap">
+        <article class="bg-white border rounded-3xl p-8 space-y-8">
+            <header class="flex items-start justify-between gap-4 flex-wrap">
                 <div>
                     <p class="text-sm text-gray-500 mb-2">${provider}</p>
                     <h1 class="text-3xl font-semibold">${safeText(item.title, 'Untitled')}</h1>
+                    <p class="mt-2 text-sm text-gray-600">Location: ${safeText(item.location, 'South Africa')}</p>
                 </div>
                 <span class="text-xs px-3 py-1 bg-[#00d4ff]/10 text-[#00d4ff] rounded-3xl">${badge}</span>
-            </div>
+            </header>
 
-            ${money ? `<p class="mt-4 text-[#00d4ff] font-semibold">${money}</p>` : ''}
-            <p class="mt-6 text-gray-700 leading-relaxed">${safeText(item.description, 'No description provided.')}</p>
+            ${money ? `<p class="text-[#00d4ff] font-semibold">${money}</p>` : ''}
 
-            <div class="mt-8 grid md:grid-cols-2 gap-6">
+            <section>
+                <h2 class="text-xl font-semibold mb-3">Detailed Description</h2>
+                <p class="text-gray-700 leading-relaxed">${safeText(item.description, 'No description provided.')}</p>
+            </section>
+
+            <section class="grid md:grid-cols-2 gap-6">
                 <div class="bg-gray-50 rounded-2xl p-5">
                     <h2 class="font-semibold mb-2">Key information</h2>
                     <p class="text-sm text-gray-700"><strong>Location:</strong> ${safeText(item.location, 'N/A')}</p>
                     <p class="text-sm text-gray-700"><strong>Deadline/Duration:</strong> ${deadlineOrDuration}</p>
+                    <p class="text-sm text-gray-700"><strong>Salary/Funding insight:</strong> ${safeText(item.salaryInsight, 'Compensation depends on qualification and employer policy.')}</p>
                 </div>
                 <div class="bg-gray-50 rounded-2xl p-5">
                     <h2 class="font-semibold mb-2">Requirements</h2>
                     <ul class="text-sm text-gray-700 list-disc pl-5 space-y-1">${formatRequirements(item.requirements)}</ul>
                 </div>
-            </div>
+            </section>
 
-            <div class="mt-8">
+            <section>
+                <h2 class="text-xl font-semibold mb-3">Application Process</h2>
+                <p class="text-gray-700 leading-relaxed">${safeText(item.applicationProcess, 'Visit the official provider website and follow the listed application steps before deadline.')}</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3">Tips for Applicants</h2>
+                <ul class="text-gray-700 list-disc pl-5 space-y-2">${formatTips(item.tips)}</ul>
+            </section>
+
+            <section class="flex flex-wrap gap-3">
                 <a href="${link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#00d4ff] text-white px-5 py-3 rounded-2xl font-medium">
-                    Apply Now <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Official Application Link <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
+                <a href="${guideLink}" class="inline-flex items-center gap-2 border px-5 py-3 rounded-2xl font-medium text-gray-700">
+                    Read related guide
+                </a>
+            </section>
+        </article>
+
+        <section class="mt-10">
+            <h2 class="text-2xl font-semibold mb-4">Related ${type === 'job' ? 'Jobs' : type === 'bursary' ? 'Bursaries' : 'Courses'}</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                ${renderRelatedItems(type, item.id)}
             </div>
-        </div>`;
+        </section>`;
 }
 
 function renderDetailsPage(type) {

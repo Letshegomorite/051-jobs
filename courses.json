@@ -3,110 +3,210 @@
     "id": 1,
     "title": "Google Data Analytics Professional Certificate",
     "institution": "Google via Coursera",
-    "duration": "6 months",
-    "fee": "R1,200/month",
+    "location": "Online access for South African learners",
+    "duration": "Approximately 6 months (part-time)",
+    "fee": "Around R1,200 per month",
     "mode": "Online",
-    "description": "Learn data cleaning, visualisation and analysis using Google Sheets, SQL, R and Tableau.",
-    "requirements": ["No prior experience needed","Basic computer skills"],
+    "salaryInsight": "Entry-level data analyst roles in South Africa often range from R18,000 to R35,000 monthly; advanced SQL and dashboard skills can improve offers.",
+    "description": "This programme introduces data cleaning, visualization and analysis using tools such as spreadsheets, SQL and Tableau. Learners complete practical case studies and build a portfolio suitable for junior analytics applications. It is useful for career changers and graduates aiming for business intelligence or data support roles.",
+    "requirements": [
+      "Reliable internet access and a computer",
+      "Basic digital literacy and time-management discipline"
+    ],
+    "applicationProcess": "Register on Coursera, select the certificate track, and complete modules consistently each week. Build project outputs in a portfolio and update your CV once capstone work is complete.",
+    "tips": [
+      "Complete capstone tasks with business context to stand out to employers.",
+      "Pair the course with Excel and SQL interview practice."
+    ],
     "link": "https://www.coursera.org/professional-certificates/google-data-analytics"
   },
   {
     "id": 2,
     "title": "Digital Marketing Short Course",
-    "institution": "UCT GetSmarter",
-    "duration": "8 weeks",
-    "fee": "R9,500",
-    "mode": "Online",
-    "description": "Master SEO, Google Ads, social media strategy and analytics.",
-    "requirements": ["Basic marketing knowledge"],
-    "link": "https://www.getsmarter.com"
+    "institution": "Red & Yellow Creative School",
+    "location": "Cape Town campus and online options in South Africa",
+    "duration": "10–12 weeks",
+    "fee": "From R8,500",
+    "mode": "Hybrid",
+    "salaryInsight": "Digital marketing upskilling can support transitions into roles averaging R20,000 to R40,000 monthly depending on specialization.",
+    "description": "This short course covers paid media, social media strategy, email marketing, campaign analytics and content planning. It is designed for junior marketers, business owners and professionals transitioning into growth roles.",
+    "requirements": [
+      "Grade 12 or equivalent is recommended",
+      "Comfort with digital tools and communication platforms"
+    ],
+    "applicationProcess": "Apply via the institution website, complete registration and payment steps, and attend orientation before coursework starts.",
+    "tips": [
+      "Build a campaign portfolio while studying.",
+      "Track metrics from mock or real campaigns for your CV."
+    ],
+    "link": "https://www.redandyellow.co.za"
   },
   {
     "id": 3,
     "title": "Project Management (PMP Prep)",
-    "institution": "Regenesys",
-    "duration": "12 weeks",
-    "fee": "R12,000",
-    "mode": "Hybrid",
-    "description": "Comprehensive project management course aligned with PMBOK.",
-    "requirements": ["Matric certificate"],
-    "link": "https://www.regenesys.net"
+    "institution": "University of Pretoria Enterprises",
+    "location": "Pretoria and online delivery in South Africa",
+    "duration": "8 weeks",
+    "fee": "From R12,000",
+    "mode": "Online",
+    "salaryInsight": "Project management certifications can increase competitiveness for coordinator and manager roles across construction, IT and operations.",
+    "description": "This preparation course introduces PMI-aligned project management frameworks, risk planning and execution monitoring. Students practise exam-style questions and apply project templates for real workplace scenarios.",
+    "requirements": [
+      "Basic project exposure is helpful",
+      "Strong reading and planning skills"
+    ],
+    "applicationProcess": "Register through UP Enterprises, confirm intake date and complete required pre-course materials before classes begin.",
+    "tips": [
+      "Practice with timed mock exams weekly.",
+      "Relate PM concepts to your current work projects."
+    ],
+    "link": "https://www.enterprises.up.ac.za"
   },
   {
     "id": 4,
     "title": "Coding Bootcamp – Full Stack Web Development",
     "institution": "HyperionDev",
-    "duration": "12 weeks",
-    "fee": "R18,000",
+    "location": "Online for South African students",
+    "duration": "3 to 6 months",
+    "fee": "From R18,000",
     "mode": "Online",
-    "description": "Intensive bootcamp covering HTML, CSS, JavaScript, React, Node.js and databases.",
-    "requirements": ["Basic computer literacy"],
+    "salaryInsight": "Junior developer salaries in South Africa often start around R18,000 to R35,000 monthly and grow with portfolio quality and internship exposure.",
+    "description": "The bootcamp covers HTML, CSS, JavaScript, backend development and deployment practices through project-based learning. Learners produce portfolio apps and receive career support in job search preparation.",
+    "requirements": [
+      "Commitment to consistent study schedule",
+      "Laptop with ability to run development tools"
+    ],
+    "applicationProcess": "Complete the online readiness check, choose study pace and submit registration details. Start foundational modules, then progress to full-stack projects and capstone presentation.",
+    "tips": [
+      "Push all projects to GitHub with clear README files.",
+      "Practice technical interviews before applying for junior roles."
+    ],
     "link": "https://www.hyperiondev.com"
   },
   {
     "id": 5,
     "title": "Bookkeeping & Accounting Short Course",
     "institution": "Damelin",
-    "duration": "6 months",
-    "fee": "R7,800",
-    "mode": "In-person",
-    "description": "Practical bookkeeping and accounting course leading to ICB certification.",
-    "requirements": ["Grade 12"],
+    "location": "Johannesburg, Durban, Cape Town and online support",
+    "duration": "3 months",
+    "fee": "From R6,500",
+    "mode": "Part-time",
+    "salaryInsight": "Bookkeeping skills can open junior finance roles and freelance opportunities, especially for SMEs requiring monthly reconciliations.",
+    "description": "This course introduces bookkeeping fundamentals, journals, reconciliations and entry-level accounting workflows used in small and medium businesses. It is suited to aspiring administrators and finance support staff.",
+    "requirements": [
+      "Numeracy competence",
+      "Basic computer literacy"
+    ],
+    "applicationProcess": "Apply online or at a Damelin campus, confirm intake and complete registration documents and fee payment.",
+    "tips": [
+      "Practice on sample transactions beyond class exercises.",
+      "Learn spreadsheet shortcuts to improve productivity."
+    ],
     "link": "https://www.damelin.co.za"
   },
   {
     "id": 6,
     "title": "Cybersecurity Fundamentals",
-    "institution": "University of Pretoria Online",
-    "duration": "10 weeks",
-    "fee": "R8,500",
+    "institution": "University of Cape Town Online High School / short learning units",
+    "location": "Online in South Africa",
+    "duration": "6 weeks",
+    "fee": "From R5,000",
     "mode": "Online",
-    "description": "Introduction to ethical hacking, network security and data protection.",
-    "requirements": ["Basic IT knowledge"],
-    "link": "https://www.up.ac.za/online-courses"
+    "salaryInsight": "Cybersecurity entry roles such as SOC analyst and security support can offer competitive starting salaries, especially with practical labs and certifications.",
+    "description": "Cybersecurity Fundamentals introduces core security principles, threat awareness, password policies, network basics and incident response concepts. It helps beginners build confidence before advanced certification tracks.",
+    "requirements": [
+      "Basic computer and internet knowledge",
+      "Willingness to practise labs and security scenarios"
+    ],
+    "applicationProcess": "Register through the provider portal, access your learning dashboard and complete weekly modules plus assessments.",
+    "tips": [
+      "Set up a basic home lab for hands-on practice.",
+      "Follow South African cybersecurity news to build context for interviews."
+    ],
+    "link": "https://www.getsmarter.com"
   },
   {
     "id": 7,
     "title": "Graphic Design with Canva & Adobe",
-    "institution": "Creative Academy",
-    "duration": "4 weeks",
-    "fee": "R4,200",
-    "mode": "Online",
-    "description": "Hands-on course covering branding, social media graphics and print design.",
-    "requirements": ["Creative interest"],
-    "link": "https://creativeacademy.co.za"
+    "institution": "Open Window / community training partners",
+    "location": "South Africa (online + selected workshops)",
+    "duration": "8 weeks",
+    "fee": "From R4,500",
+    "mode": "Hybrid",
+    "salaryInsight": "Design freelancers and junior designers can increase earnings by combining portfolio quality with branding and social content skills.",
+    "description": "This practical design course covers layout, typography, brand consistency and social media asset creation using Canva and Adobe tools. Learners build portfolio pieces suitable for freelance or junior design applications.",
+    "requirements": [
+      "Creative interest and basic computer literacy",
+      "Access to design software or trial tools"
+    ],
+    "applicationProcess": "Complete registration online, attend onboarding and submit practical projects during each module.",
+    "tips": [
+      "Build a niche portfolio (e.g., retail, education or NGO).",
+      "Learn to present design rationale, not only final artwork."
+    ],
+    "link": "https://www.openwindow.co.za"
   },
   {
     "id": 8,
-    "title": "Supply Chain Management",
-    "institution": "Nelson Mandela University",
-    "duration": "8 weeks",
-    "fee": "R6,500",
-    "mode": "Hybrid",
-    "description": "Short course in logistics, procurement and inventory management.",
-    "requirements": ["Matric"],
-    "link": "https://www.mandela.ac.za/short-courses"
+    "title": "Supply Chain Management Short Course",
+    "institution": "Unisa Centre for Lifelong Learning",
+    "location": "Online and distance in South Africa",
+    "duration": "4 months",
+    "fee": "From R7,800",
+    "mode": "Distance",
+    "salaryInsight": "Supply chain upskilling can lead to coordinator roles in logistics, procurement and warehousing with steady demand across provinces.",
+    "description": "The course introduces procurement basics, inventory control, logistics planning and supplier performance concepts relevant to South African operations environments. It supports progression into entry-level supply chain roles.",
+    "requirements": [
+      "Grade 12 recommended",
+      "Basic spreadsheet and communication skills"
+    ],
+    "applicationProcess": "Apply through the Unisa short learning programme process, submit required documents and follow registration instructions for your intake.",
+    "tips": [
+      "Practice calculating stock turns and reorder points.",
+      "Understand real local logistics constraints when discussing case studies."
+    ],
+    "link": "https://www.unisa.ac.za"
   },
   {
     "id": 9,
     "title": "English for Business Communication",
-    "institution": "British Council",
-    "duration": "6 weeks",
-    "fee": "R3,800",
-    "mode": "Online",
-    "description": "Improve business writing, presentations and workplace English.",
-    "requirements": ["Intermediate English"],
-    "link": "https://www.britishcouncil.org.za"
+    "institution": "British Council Partner Programmes",
+    "location": "Major South African cities and online options",
+    "duration": "6–10 weeks",
+    "fee": "From R3,200",
+    "mode": "Part-time",
+    "salaryInsight": "Strong professional communication can improve hiring outcomes across customer-facing, administrative and management career paths.",
+    "description": "This course strengthens email writing, presentations, meeting participation and business vocabulary for workplace communication. It is valuable for graduates and professionals preparing for interviews or promotions.",
+    "requirements": [
+      "Basic English proficiency",
+      "Commitment to regular speaking and writing practice"
+    ],
+    "applicationProcess": "Choose a partner provider, complete placement assessment if required, then register and attend scheduled sessions.",
+    "tips": [
+      "Record short speaking drills weekly to track improvement.",
+      "Use course exercises to build interview-ready answers."
+    ],
+    "link": "https://www.britishcouncil.org"
   },
   {
     "id": 10,
     "title": "Electric Vehicle Technician Course",
-    "institution": "Mercedes-Benz SA Academy",
-    "duration": "12 months",
-    "fee": "Fully sponsored",
+    "institution": "Automotive Industry Training Centre SA",
+    "location": "Gauteng with practical workshop sessions",
+    "duration": "12 weeks",
+    "fee": "From R14,500",
     "mode": "In-person",
-    "description": "Learn EV maintenance and diagnostics.",
-    "requirements": ["N3 Engineering","Driver’s licence"],
-    "link": "https://www.mercedes-benz.co.za/careers"
+    "salaryInsight": "EV and advanced auto-electrical skills are growing niche areas in South Africa and may improve technician employability in future-focused workshops.",
+    "description": "This programme introduces EV safety, battery systems, diagnostics and maintenance fundamentals for aspiring and current automotive technicians. Practical sessions focus on safe handling procedures and fault identification workflows.",
+    "requirements": [
+      "Automotive background or technical aptitude recommended",
+      "Ability to attend practical sessions in person"
+    ],
+    "applicationProcess": "Submit an application form, proof of prior training/experience where applicable, and complete registration before intake closes.",
+    "tips": [
+      "Revise electrical fundamentals before course start.",
+      "Document practical tasks completed for use in your CV and interviews."
+    ],
+    "link": "https://www.aidc.co.za"
   }
 ]

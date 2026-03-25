@@ -2,111 +2,241 @@
   {
     "id": 1,
     "title": "NSFAS Bursary 2026",
-    "provider": "NSFAS",
-    "amount": "Full tuition + R1,800 allowance",
+    "provider": "National Student Financial Aid Scheme (NSFAS)",
+    "location": "Public universities and TVET colleges across South Africa",
+    "amount": "Covers tuition, approved accommodation, learning materials and allowances",
+    "salaryInsight": "NSFAS support value varies by institution and accommodation type, often exceeding R60,000 per academic year for qualifying students.",
     "deadline": "31 March 2026",
     "level": "Undergraduate",
-    "description": "National Student Financial Aid Scheme for South African citizens studying at public universities and TVET colleges.",
-    "requirements": ["South African citizen","Household income below R350,000","Accepted at public institution"],
+    "description": "The NSFAS Bursary assists financially eligible South African students studying at public universities and TVET colleges. Funding is designed to reduce barriers to higher education by covering core academic and living costs according to NSFAS guidelines. Students must maintain academic progress and keep funding details updated annually.",
+    "requirements": [
+      "South African citizen",
+      "Combined household income threshold as defined by NSFAS policy",
+      "Confirmed admission or registration at a public institution",
+      "Accurate supporting documents submitted before closing date"
+    ],
+    "applicationProcess": "Create an NSFAS online account, complete all profile sections, and upload required documents (ID, proof of income and academic records). Track your application status regularly and respond quickly to any document requests.",
+    "tips": [
+      "Apply early to avoid deadline congestion and upload errors.",
+      "Ensure names on all documents match your ID details exactly.",
+      "Check your portal weekly for verification updates."
+    ],
     "link": "https://www.nsfas.org.za"
   },
   {
     "id": 2,
-    "title": "Funza Lushaka Bursary",
+    "title": "Funza Lushaka Bursary Programme",
     "provider": "Department of Basic Education",
-    "amount": "Full tuition + stipend",
-    "deadline": "15 February 2026",
+    "location": "Universities in South Africa offering approved teaching qualifications",
+    "amount": "Tuition, accommodation, meals, books and a living allowance",
+    "salaryInsight": "Teacher training bursaries typically cover the majority of study costs and reduce student debt substantially for qualifying candidates.",
+    "deadline": "30 November 2026",
     "level": "Undergraduate",
-    "description": "Bursary for students who want to become teachers in priority subject areas.",
-    "requirements": ["Commitment to teach in SA public schools","Good academic record"],
-    "link": "https://www.funzalushaka.gov.za"
+    "description": "Funza Lushaka funds students pursuing teaching qualifications in priority subjects such as Mathematics, Science and African languages. Recipients are expected to teach at public schools after graduation according to programme obligations. The bursary supports both current students and new entrants meeting selection criteria.",
+    "requirements": [
+      "South African citizen with strong academic performance",
+      "Acceptance into a BEd or PGCE programme at an approved university",
+      "Willingness to teach in a public school after graduation",
+      "Submission of complete and accurate supporting documents"
+    ],
+    "applicationProcess": "Register on the e-Government bursary portal, complete the application form, upload certified documents and monitor status notifications. Successful applicants receive placement and obligation details before final acceptance.",
+    "tips": [
+      "Highlight your commitment to teaching underserved communities.",
+      "Keep certified copies up to date and readable.",
+      "Read service obligation terms carefully before accepting funding."
+    ],
+    "link": "https://www.education.gov.za"
   },
   {
     "id": 3,
     "title": "Anglo American Bursary Programme",
-    "provider": "Anglo American",
-    "amount": "R120,000 per year",
-    "deadline": "30 April 2026",
+    "provider": "Anglo American South Africa",
+    "location": "South African universities (engineering, mining and technical fields)",
+    "amount": "Full or partial funding with possible vacation work support",
+    "salaryInsight": "Industry bursaries in engineering may include tuition plus structured work exposure, creating strong early-career earning potential.",
+    "deadline": "15 August 2026",
     "level": "Undergraduate",
-    "description": "Engineering, mining, geology and finance bursaries.",
-    "requirements": ["Matric with 70%+ average","Engineering or Commerce degree"],
-    "link": "https://www.angloamerican.com/careers/bursaries"
+    "description": "Anglo American’s bursary programme supports academically strong students in scarce-skill disciplines linked to mining, engineering and operations. Beyond financial support, selected students may gain mentorship and vacation work opportunities that improve graduate employability.",
+    "requirements": [
+      "South African citizen",
+      "Excellent results in Mathematics and Science-related subjects",
+      "Admission to an approved South African university programme",
+      "Willingness to participate in developmental activities where required"
+    ],
+    "applicationProcess": "Submit an online application with academic records, ID and motivation letter via the official Anglo American careers portal. Candidates may be invited to assessments or interviews depending on discipline demand.",
+    "tips": [
+      "Explain why your field is relevant to South Africa’s skills needs.",
+      "Include leadership and community service achievements.",
+      "Prepare a concise, professional motivation letter."
+    ],
+    "link": "https://www.angloamerican.com/careers"
   },
   {
     "id": 4,
     "title": "Standard Bank Bursary",
-    "provider": "Standard Bank",
-    "amount": "Full tuition + laptop",
-    "deadline": "28 February 2026",
+    "provider": "Standard Bank Group",
+    "location": "South African universities",
+    "amount": "Tuition support and possible additional allowances for selected programmes",
+    "salaryInsight": "Corporate bursaries in finance-related fields often include networking and graduate pipeline opportunities that improve long-term income prospects.",
+    "deadline": "30 September 2026",
     "level": "Undergraduate",
-    "description": "For students studying Finance, Economics, Accounting and IT.",
-    "requirements": ["Financial need","Academic excellence"],
-    "link": "https://www.standardbank.co.za/bursaries"
+    "description": "The Standard Bank Bursary targets high-performing students pursuing qualifications aligned with banking, technology, actuarial science and related fields. The programme aims to build future talent for the South African financial sector through funding and professional exposure.",
+    "requirements": [
+      "South African citizen with strong academic results",
+      "Relevant field of study aligned to programme criteria",
+      "Admission to or current study at an accredited institution",
+      "Complete online application and supporting documentation"
+    ],
+    "applicationProcess": "Apply on the Standard Bank careers or bursary portal before the deadline. Provide transcripts, ID and a motivational statement. Shortlisted applicants may complete interviews or assessments.",
+    "tips": [
+      "Connect your career goals to banking and financial inclusion outcomes.",
+      "Use a clear and concise CV with academic distinctions.",
+      "Submit all required documents in the requested format."
+    ],
+    "link": "https://www.standardbank.com"
   },
   {
     "id": 5,
-    "title": "MasterCard Foundation Scholars",
-    "provider": "MasterCard Foundation",
-    "amount": "Full scholarship",
-    "deadline": "15 March 2026",
+    "title": "Mastercard Foundation Scholars Program",
+    "provider": "Mastercard Foundation Partner Institutions",
+    "location": "Selected universities in South Africa and other African countries",
+    "amount": "Comprehensive scholarship support including tuition and student support services",
+    "salaryInsight": "Comprehensive scholarship programmes reduce financial strain and often include leadership development that strengthens graduate career outcomes.",
+    "deadline": "Institution-specific deadlines in 2026",
     "level": "Undergraduate",
-    "description": "Full scholarships at selected SA universities for young leaders.",
-    "requirements": ["Leadership potential","Financial need"],
-    "link": "https://www.mastercardfdn.org"
+    "description": "The Mastercard Foundation Scholars Program supports talented students from economically disadvantaged backgrounds through partner institutions. Funding is combined with mentorship, leadership training and community engagement components to build long-term impact.",
+    "requirements": [
+      "Demonstrated academic potential and leadership",
+      "Financial need according to partner institution criteria",
+      "Admission to a participating programme or institution",
+      "Commitment to community contribution and ethical leadership"
+    ],
+    "applicationProcess": "Apply directly through participating institution channels and complete all scholarship-specific forms. Follow each institution’s deadlines carefully because submission windows differ.",
+    "tips": [
+      "Research each partner institution’s eligibility requirements in detail.",
+      "Show evidence of leadership and social impact in your application.",
+      "Submit applications early to allow time for document verification."
+    ],
+    "link": "https://mastercardfdn.org/all/scholars-program"
   },
   {
     "id": 6,
-    "title": "SASOL Bursary",
-    "provider": "SASOL",
-    "amount": "R150,000 per year",
-    "deadline": "31 March 2026",
+    "title": "Sasol Bursary Programme",
+    "provider": "Sasol",
+    "location": "South African universities (STEM and engineering focus)",
+    "amount": "Tuition plus structured support depending on bursary stream",
+    "salaryInsight": "STEM bursaries linked to major employers can provide direct pathways into graduate programmes with competitive starting salaries.",
+    "deadline": "31 May 2026",
     "level": "Undergraduate",
-    "description": "Engineering and Science bursaries.",
-    "requirements": ["STEM subjects","Matric 75%+"],
-    "link": "https://www.sasol.com/careers/bursaries"
+    "description": "Sasol provides bursaries to students in priority engineering and science fields that support the company’s long-term technical talent pipeline. Recipients may receive mentorship and development opportunities aligned with future employment pathways.",
+    "requirements": [
+      "South African citizenship",
+      "Strong mathematics and science academic performance",
+      "Acceptance into an approved STEM qualification",
+      "Compliance with Sasol bursary terms and ongoing performance requirements"
+    ],
+    "applicationProcess": "Complete the online Sasol bursary form, upload supporting documents and verify submission confirmation. Shortlisted candidates may be invited for additional screening.",
+    "tips": [
+      "Double-check maths and science marks in uploaded records.",
+      "Use a motivation letter that aligns your goals with energy and innovation sectors.",
+      "Track communication from Sasol and respond promptly."
+    ],
+    "link": "https://www.sasol.com/careers"
   },
   {
     "id": 7,
     "title": "Old Mutual Bursary",
     "provider": "Old Mutual",
-    "amount": "Full tuition",
-    "deadline": "20 February 2026",
+    "location": "South African universities",
+    "amount": "Financial support for selected business and technical qualifications",
+    "salaryInsight": "Financial services bursaries often pair funding with mentoring and graduate opportunities, improving transition into formal employment.",
+    "deadline": "30 June 2026",
     "level": "Undergraduate",
-    "description": "Actuarial, Accounting and Finance bursaries.",
-    "requirements": ["Mathematics 80%","Financial need"],
-    "link": "https://www.oldmutual.co.za/bursaries"
+    "description": "Old Mutual’s bursary programme supports high-potential students in actuarial science, data, finance, technology and related programmes. The initiative develops future professionals through funding and possible work-readiness support.",
+    "requirements": [
+      "South African citizen",
+      "Strong academic results in relevant subjects",
+      "Acceptance at an accredited tertiary institution",
+      "Submission of complete bursary documentation"
+    ],
+    "applicationProcess": "Apply through Old Mutual’s official bursary portal with CV, transcripts and motivational statement. Selected applicants may be contacted for interviews or additional evaluations.",
+    "tips": [
+      "Focus your motivation on long-term professional development.",
+      "Keep your academic transcripts current and complete.",
+      "Proofread all forms before final submission."
+    ],
+    "link": "https://www.oldmutual.co.za"
   },
   {
     "id": 8,
-    "title": "TVET College Bursary",
-    "provider": "DHET",
-    "amount": "Full tuition + tools",
-    "deadline": "Ongoing",
-    "level": "TVET",
-    "description": "Bursary for students enrolled at any public TVET college.",
-    "requirements": ["Registered at TVET college","South African citizen"],
-    "link": "https://www.tvetcolleges.co.za"
+    "title": "TVET College Bursary Support",
+    "provider": "Department of Higher Education and Training",
+    "location": "Public TVET colleges across South Africa",
+    "amount": "Tuition and approved support costs for qualifying TVET students",
+    "salaryInsight": "TVET bursary support can significantly lower practical training costs and help students complete industry-relevant qualifications faster.",
+    "deadline": "Per-college intake deadlines in 2026",
+    "level": "Diploma/Certificate",
+    "description": "TVET bursary support assists students enrolling in vocational and technical programmes at public colleges. Funding priorities and allocations may differ by institution and intake cycle, so applicants should engage early with campus financial aid offices.",
+    "requirements": [
+      "South African citizen",
+      "Registration or acceptance at a public TVET college",
+      "Financial eligibility according to DHET/college criteria",
+      "Submission of required documentation within campus deadlines"
+    ],
+    "applicationProcess": "Visit your selected TVET college’s financial aid office or online portal, complete NSFAS/DHET-linked forms and upload supporting documents. Follow up with the college for status updates and missing information requests.",
+    "tips": [
+      "Confirm exact intake dates with your campus.",
+      "Keep digital and printed copies of all submissions.",
+      "Attend college orientation for financial aid guidance."
+    ],
+    "link": "https://www.dhet.gov.za"
   },
   {
     "id": 9,
     "title": "Postgraduate Merit Bursary",
-    "provider": "University of Johannesburg",
-    "amount": "R80,000",
-    "deadline": "30 April 2026",
+    "provider": "University Financial Aid Offices",
+    "location": "South African universities",
+    "amount": "Partial or full tuition support based on academic merit",
+    "salaryInsight": "Merit-based postgraduate funding can offset research and tuition costs, reducing time to completion and debt pressure.",
+    "deadline": "Faculty-specific deadlines in 2026",
     "level": "Postgraduate",
-    "description": "Merit-based bursary for Master’s and Doctoral students.",
-    "requirements": ["Honours degree 70%+","Research proposal"],
-    "link": "https://www.uj.ac.za/bursaries"
+    "description": "Many South African universities offer merit bursaries for honours, master’s and doctoral students with strong academic records. Awards may be linked to faculty budgets, research areas and supervisor recommendations.",
+    "requirements": [
+      "Excellent undergraduate or honours academic performance",
+      "Admission into a postgraduate programme",
+      "Compliance with faculty and institutional criteria",
+      "Submission of proposal and supporting documents where required"
+    ],
+    "applicationProcess": "Apply through the relevant university faculty or postgraduate funding office. Submit transcripts, academic references, CV and research proposal if required by your programme.",
+    "tips": [
+      "Engage potential supervisors early for guidance and references.",
+      "Align your research proposal to faculty priorities where possible.",
+      "Track each faculty’s specific closing dates."
+    ],
+    "link": "https://www.universityworldnews.com/page.php?page=Scholarships"
   },
   {
     "id": 10,
     "title": "Motsepe Foundation Bursary",
     "provider": "Motsepe Foundation",
-    "amount": "Full scholarship",
-    "deadline": "15 March 2026",
+    "location": "South African universities and colleges",
+    "amount": "Tuition-focused support with programme-specific conditions",
+    "salaryInsight": "Foundation bursaries can bridge tuition gaps for high-performing students and improve completion rates in scarce-skill fields.",
+    "deadline": "Annual cycle announced by foundation",
     "level": "Undergraduate",
-    "description": "Full funding for students from disadvantaged communities.",
-    "requirements": ["South African citizen","Financial need"],
-    "link": "https://motsepefoundation.org/bursaries"
+    "description": "The Motsepe Foundation bursary supports deserving students with demonstrated academic potential and financial need. Programme focus and availability may change each year, so applicants should review official notices carefully.",
+    "requirements": [
+      "South African citizen",
+      "Strong academic track record",
+      "Financial need and valid supporting documents",
+      "Application within official announcement period"
+    ],
+    "applicationProcess": "Monitor official foundation communication channels for bursary opening dates and application guidelines. Submit required forms and documents exactly as instructed.",
+    "tips": [
+      "Do not rely on third-party social posts—use official channels only.",
+      "Prepare documents ahead of opening dates.",
+      "Keep contact details active for follow-up communication."
+    ],
+    "link": "https://www.motsepefoundation.org"
   }
 ]
