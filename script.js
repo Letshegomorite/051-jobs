@@ -12,6 +12,16 @@ const STORAGE_KEYS = {
 
 const FALLBACK_APPLY_LINK = '#';
 
+function ensureGlobalTheme() {
+    if (!document.head) return;
+    if (document.querySelector('link[href="site.css"]')) return;
+
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'site.css';
+    document.head.appendChild(link);
+}
+
 function safeArray(value) {
     return Array.isArray(value) ? value : [];
 }
@@ -512,5 +522,6 @@ async function start() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+    ensureGlobalTheme();
     start().catch(error => console.error('Startup error:', error));
 });
